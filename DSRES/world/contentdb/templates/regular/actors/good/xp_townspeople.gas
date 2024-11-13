@@ -1,0 +1,1202 @@
+[t:template,n:xp_lharnob]
+{
+	specializes = dsx_blacksmith_base;
+	category_name = "1W_shopkeep";
+	doc = "xp_lharnob";
+ 	common:screen_name = "Blacksmith Lharnob";
+	[aspect]
+	{
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		model = m_c_gbn_bs_BS2;
+		[textures] { 0=b_c_gbn_bs-04; }
+	}
+	[actor]	{portrait_icon = b_gui_ig_i_ic_c_lharnob;}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lharnob_0;
+		}
+	}
+	[respawn_shrine]{}
+	[store]
+	{
+		item_markup = 0.5;
+	}
+   [inventory]
+   {
+	   [store_pcontent]
+	   {
+		   full_ratio = 0;
+		   [armor] // BODY
+		   {
+			   [all*]
+			   {
+				   il_main = #body,m/50-60;
+				   max = 4;
+				   min = 2;
+			   }
+			   [all*]
+			   {
+				   il_main = #body,r/50-72;
+				   max = 4;
+				   min = 2;
+			   }
+			   [all*]
+			   {
+				   il_main = #body,f/55-70;
+				   max = 4;
+				   min = 2;
+			   }				   
+			   [all*]
+			   {
+				   il_main = #body/6-25;
+				   max = 15;
+				   min = 10;
+			   }
+			   [all*]
+			   {
+				   il_main = #body/25-40;
+				   max = 6;
+				   min = 2;
+			   }
+			   [all*]
+			   {
+				   il_main = #body/40-85;
+				   max = 5;
+				   min = 2;
+			   }
+			   
+			   // HELMETS
+			   [all*]
+			   {
+				   il_main = #helm,m/50-70;
+				   max = 3;
+				   min = 3;
+			   }
+			   [all*]
+			   {
+				   il_main = #helm,r/50-70;
+				   max = 3;
+				   min = 3;
+			   }
+			   [all*]
+			   {
+				   il_main = #helm/1-33;
+				   max = 15;
+				   min = 10;
+			   }
+			   [all*]
+			   {
+				   il_main = #helm/34-62;
+				   max = 5;
+				   min = 2;
+			   }
+			   [all*]
+			   {
+				   il_main = #helm/63-85;
+				   max = 5;
+				   min = 2;
+			   }
+			   
+			   // GLOVES		   
+			   [all*]
+			   {
+				   il_main = #gloves,m/40-60;
+				   max = 3;
+				   min = 2;
+			   }
+			   [all*]
+			   {
+				   il_main = #gloves,r/40-60;
+				   max = 3;
+				   min = 2;
+			   }
+			   [all*]
+			   {
+				   il_main = #gloves/6-33;
+				   max = 15;
+				   min = 10;
+			   }
+			   [all*]
+			   {
+				   il_main = #gloves/34-62;
+				   max = 5;
+				   min = 2;
+			   }
+			   [all*]
+			   {
+				   il_main = #gloves/63-85;
+				   max = 5;
+				   min = 2;
+			   }
+			   
+			   // BOOTS			   
+			   [all*]
+			   {
+				   il_main = #boots,m/40-60;
+				   max = 3;
+				   min = 2;
+			   }
+			   [all*]
+			   {
+				   il_main = #boots,r/40-60;
+				   max = 3;
+				   min = 2;
+			   }
+			   [all*]
+			   {
+				   il_main = #boots/3-40;
+				   max = 15;
+				   min = 10;
+			   }
+			   [all*]
+			   {
+				   il_main = #boots/41-71;
+				   max = 5;
+				   min = 2;
+			   }
+			   [all*]
+			   {
+				   il_main = #boots/72-85;
+				   max = 5;
+				   min = 2;
+			   }				
+		   }
+		   [shields]
+		   {
+			   [all*]
+			   {
+				   il_main = #shield,m/30-50;
+				   max = 4;
+				   min = 4;
+			   }
+			   [all*]
+			   {
+				   il_main = #shield,r/30-50;
+				   max = 4;
+				   min = 4;
+			   }
+			   [all*]
+			   {
+				   il_main = #shield/6-33;
+				   max = 12;
+				   min = 8;
+			   }
+			   [all*]
+			   {
+				   il_main = #shield/34-62;
+				   max = 4;
+				   min = 4;
+			   }
+			   [all*]
+			   {
+				   il_main = #shield/63-80;
+				   max = 4;
+				   min = 4;
+			   }
+			   
+		   }
+		   [weapons]
+		   {
+			   [all*]
+			   {
+				   il_main = #melee/12-22;
+				   max = 15;
+				   min = 10;
+			   }
+			   [all*]
+			   {
+				   il_main = #melee/23-35;
+				   max = 5;
+				   min = 5;
+			   }
+			   [all*]
+			   {
+				   il_main = #melee/36-43;
+				   max = 5;
+				   min = 5;
+			   }
+			   
+			   [all*]
+			   {
+				   il_main = #ranged/12-22;
+				   max = 15;
+				   min = 10;
+			   }
+			   [all*]
+			   {
+				   il_main = #ranged/23-35;
+				   max = 5;
+				   min = 5;
+			   }
+			   [all*]
+			   {
+				   il_main = #ranged/36-48;
+				   max = 5;
+				   min = 5;
+			   }	   
+		   }
+		}
+	}
+}
+
+[t:template,n:xp_kiira]
+{
+	category_name = "1W_shopkeep";
+	doc = "xp_kiira";
+	specializes = dsx_base_npc_fg;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_kiira;
+	}
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_15;
+			1 = b_c_pos_a1_028;
+		}
+	}
+	[common]
+	{
+		screen_name = "Kiira";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = kiira_0;
+			* = kiira_1;
+			* = kiira_1_shop;
+			* = kiira_finish;
+		}
+	}
+	[inventory]
+	{
+		custom_head = m_c_gah_fg_hlmt_head-02;
+		[equipment]
+		{
+			es_feet = bo_bo_le_light;
+		}
+		[store_pcontent]
+		{
+			full_ratio = 0;		
+			[magic]
+			{
+				[all*]
+				{
+					il_main = #spell/0-3;
+					max = 20;
+					min = 18;
+				}
+				[all*]
+				{
+					il_main = #spell/4-6;
+					max = 20;
+					min = 15;
+				}
+				[all*]
+				{
+					il_main = #spell/6-8;
+					max = 18;
+					min = 15;
+				}
+				[all*]
+				{
+					il_main = #spell/9-12;
+					max = 4;
+					min = 4;
+				}
+			}
+			[misc]
+			{
+				[all*]
+				{
+					il_main = DSX_backpack_empty;
+					max = 3;
+					min = 2;
+				}
+				[all*]
+				{
+					il_main = #spellbook/16-21;
+					max = 12;
+					min = 9;
+				}
+				[all*]
+				{
+					il_main = #spellbook/22-25;
+					max = 4;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #spellbook/26-35;
+					max = 4;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 2;
+					min = 1;
+				}
+				[all*]
+				{
+					il_main = #ring/-mod(1)/22-25;
+					max = 3;
+					min = 1;
+				}
+				[all*]
+				{
+					il_main = #amulet/-mod(1)/22-25;
+					max = 3;
+					min = 1;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_xp_kiira.skrit;
+	}
+	[respawn_shrine]{}
+	[store] // extra items that should always be on hand
+	{
+		item_markup = 2;
+		[item_restock]
+		{
+			potion_health_small = 12;
+			potion_mana_small = 12;
+
+			potion_health_medium = 7;
+			potion_mana_medium = 7;
+
+			potion_rejuvenation_small = 2;
+
+			scroll_resurrect = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+	
+			spell_fireshot = 2;
+			spell_zap = 2;
+		}
+	}
+}
+
+[t:template,n:xp_rowan]
+{
+	category_name = "1W_character";
+	doc = "xp_rowan";
+	specializes = base_npc_fb;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		= 14, 0;
+			intelligence 	=  8, 0;
+			dexterity 		= 11, 0;
+			melee 			= 11, 0;
+		}
+	}
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		[textures]
+		{
+			0 = b_c_gan_fb_skin_rowan;
+			1 = b_c_pos_a1_rowan;
+		}
+	}
+	[common]
+	{
+		screen_name = "Rowan";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = rowan_1;
+			* = rowan_2;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_xp_rowan.skrit;
+		melee_engage_range			= 13.2;
+		ranged_engage_range	 		= 13.5;
+		sight_range					= 14.0;
+	}
+	[inventory]
+	{
+		spew_equipped_kill_count = <ignore>;
+	}
+	
+}
+
+[t:template,n:xp_rowan_evil]
+{
+	category_name = "1W_character";
+	doc = "xp_rowan";
+	specializes = base_npc_fb;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		= 14, 0;
+			intelligence 	=  8, 0;
+			dexterity 		= 11, 0;
+			melee 			= 11, 0;
+		}
+	}
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		[textures]
+		{
+			0 = b_c_gan_fb_skin_rowan;
+			1 = b_c_pos_a1_rowan;
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				il_main = #armor/-rare(1)/53-118;
+				il_main = #armor/-rare(1)/53-118;
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/36-44;
+					il_main = #armor/-rare(1)/53-118;
+					il_main = #*/-rare(1)/36-44;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-unique(2)/26-34;
+					il_main = #armor/-unique(2)/43-98;
+					il_main = #*/-unique(2)/26-34;
+				}			
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/36-44;
+					il_main = #armor/-rare(1)/53-118;
+					il_main = #*/-rare(1)/36-44;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Rowan";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = rowan_4;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_xp_rowan.skrit;
+		melee_engage_range			= 13.2;
+		ranged_engage_range	 		= 13.5;
+		sight_range					= 14.0;
+	}
+	
+	[doppelganger]
+	{ 
+		statsMultiplier = 1.8;
+		effect_script 	= doppelganger_glow_boss;
+	}
+}
+
+[t:template,n:xp_moht]
+{
+	category_name = "1W_character";
+	doc = "xp_moht";
+	specializes = base_npc_fb;
+	[body]
+	{
+		armor_version = gah_fb;
+		avg_move_velocity = 4.500000;
+		initial_chore = chore_fidget;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fb_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					high = at-02;
+					loww = at-03;
+					extr = at-04;
+					qffg = dff;
+				}
+		 	  	[anim_durations]
+				{
+					fs0 = 1.250;
+					fs1 = 0.830;
+					fs2 = 0.830;
+					fs3 = 1.250;
+					fs4 = 1.250;
+					fs5 = 1.250;
+					fs6 = 1.000;
+					fs7 = 0.125;
+					fs8 = 1.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = simple_loop;
+				[anim_files] { 00=dff; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					andi = a_c_gah_fb_fs0_dsf-17;
+					bed1 = a_c_gah_fb_fs0_dsf-05;
+					bed2 = a_c_gah_fb_fs0_dsf-06;
+					bed3 = a_c_gah_fb_fs0_dsf-07;
+					bed4 = a_c_gah_fb_fs0_dsf-11;
+					bed5 = a_c_gah_fb_fs0_dsf-12;
+					drnk = a_c_gah_fb_fs1_dk;
+					duke = a_c_gah_fb_fs0_mg-02;
+					froz = a_c_gah_fb_fs0_dsf-16;
+					frtd = a_c_gah_fb_fs0_dsf-03;
+					gtup = a_c_gah_fb_fs0_up;
+					hoe1 = a_c_gah_fb_fs5_dsf-02;
+					knee = a_c_gah_fb_fs1_dsf-03;
+					lblg = a_c_gah_fb_fs2_dsf-02;
+					look = a_c_gah_fb_fs0_dsf;
+					lstn = a_c_gah_fb_fs1_dsf-04;
+					lsn2 = a_c_gah_fb_fs0_dsf-18;
+					mrik = a_c_gah_fb_fs0_dsf-08;
+					sit1 = a_c_gah_fb_fs0_dsf-09;
+					sit2 = a_c_gah_fb_fs0_dsf-10;
+					talk = a_c_gah_fb_fs0_dsf-04;
+					wyme = a_c_gah_fb_fs0_dsf-02;		
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_walk;
+				[anim_files] { 05=rl; }
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Moht";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = moht_0;
+			* = moht_0_revisit;
+			* = moht_1;
+			* = moht_1_money;
+			* = moht_2;
+			* = moht_2_money;
+			* = moht_finish;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ra_ro_m_g_c_001;
+			es_feet = bo_bo_le_light;
+			es_forearms = gl_gl_le_f_g_c_avg;
+			es_head = he_ca_ro_felt_04;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_xp_moht.skrit;
+	}
+}
+
+[t:template,n:xp_guard1]
+{
+	category_name = "1W_character";
+	doc = "xp_guard1";
+	specializes = mp_guard;
+	[common]
+	{
+		screen_name = "Guard Corthell";
+	}
+	[body]
+	{
+		armor_version = gah_fb;
+		avg_move_velocity = 4.500000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fb_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					qffg = dff;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dsf;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					bed1 = a_c_gah_fb_fs0_dsf-05;
+					bed2 = a_c_gah_fb_fs0_dsf-06;
+					bed3 = a_c_gah_fb_fs0_dsf-07;
+					bed4 = a_c_gah_fb_fs0_dsf-11;
+					bed5 = a_c_gah_fb_fs0_dsf-12;
+					bed6 = a_c_gah_fb_fs0_dsf-13;
+					bed7 = a_c_gah_fb_fs0_dsf-14;
+					look = a_c_gah_fb_fs0_dsf;
+					sit1 = a_c_gah_fb_fs0_dsf-09;
+					sit2 = a_c_gah_fb_fs0_dsf-10;
+					sit3 = a_c_gah_fb_fs0_dsf-15;
+					talk = a_c_gah_fb_fs2_dff;
+					wyme = a_c_gah_fb_fs0_dsf-02;
+					lsn2 = a_c_gah_fb_fs0_dsf-18;
+					hoe1 = a_c_gah_fb_fs5_dsf-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = guard1_0;
+			* = guard1_2;
+			* = guard1_finish;
+		}
+	}		
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_xp_guard1.skrit;
+	}
+}
+
+[t:template,n:xp_guard2]
+{
+	category_name = "1W_character";
+	doc = "xp_guard2";
+	specializes = mp_guard;
+	[common]
+	{
+		screen_name = "Guard Dunlop";
+	}
+		
+	[body]
+	{
+		armor_version = gah_fb;
+		avg_move_velocity = 4.500000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fb_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					qffg = dff;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dsf;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					bed1 = a_c_gah_fb_fs0_dsf-05;
+					bed2 = a_c_gah_fb_fs0_dsf-06;
+					bed3 = a_c_gah_fb_fs0_dsf-07;
+					bed4 = a_c_gah_fb_fs0_dsf-11;
+					bed5 = a_c_gah_fb_fs0_dsf-12;
+					bed6 = a_c_gah_fb_fs0_dsf-13;
+					bed7 = a_c_gah_fb_fs0_dsf-14;
+					look = a_c_gah_fb_fs0_dsf;
+					sit1 = a_c_gah_fb_fs0_dsf-09;
+					sit2 = a_c_gah_fb_fs0_dsf-10;
+					sit3 = a_c_gah_fb_fs0_dsf-15;
+					talk = a_c_gah_fb_fs2_dff;
+					wyme = a_c_gah_fb_fs0_dsf-02;
+					lsn2 = a_c_gah_fb_fs0_dsf-18;
+					hoe1 = a_c_gah_fb_fs5_dsf-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = guard2;
+			* = guard2_finish;
+			* = guard2_finish_revisit;
+		}
+	}
+}
+
+[t:template,n:xp_guard3]
+{
+	category_name = "1W_character";
+	doc = "xp_guard2";
+	specializes = mp_guard;
+	[common]
+	{
+		screen_name = "Guard Fielding";
+	}
+		
+	[body]
+	{
+		armor_version = gah_fb;
+		avg_move_velocity = 4.500000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fb_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					qffg = dff;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dsf;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					bed1 = a_c_gah_fb_fs0_dsf-05;
+					bed2 = a_c_gah_fb_fs0_dsf-06;
+					bed3 = a_c_gah_fb_fs0_dsf-07;
+					bed4 = a_c_gah_fb_fs0_dsf-11;
+					bed5 = a_c_gah_fb_fs0_dsf-12;
+					bed6 = a_c_gah_fb_fs0_dsf-13;
+					bed7 = a_c_gah_fb_fs0_dsf-14;
+					look = a_c_gah_fb_fs0_dsf;
+					sit1 = a_c_gah_fb_fs0_dsf-09;
+					sit2 = a_c_gah_fb_fs0_dsf-10;
+					sit3 = a_c_gah_fb_fs0_dsf-15;
+					talk = a_c_gah_fb_fs2_dff;
+					wyme = a_c_gah_fb_fs0_dsf-02;
+					lsn2 = a_c_gah_fb_fs0_dsf-18;
+					hoe1 = a_c_gah_fb_fs5_dsf-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = guard3;
+		}
+	}
+}
+
+[t:template,n:xp_raab]
+{
+	category_name = "1W_character";
+	doc = "xp_raab";
+	specializes = mp_townfolk_male_05;	
+	[common]
+	{
+		screen_name = "Raab";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = raab_0;
+			* = raab_finish;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ra_ro_m_d_c_003;
+			es_feet = bo_bo_le_light;
+			es_head = he_ca_ro_turban_02;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_xp_raab.skrit;
+	}
+}
+
+[t:template,n:xp_phelan]
+{
+	category_name = "1W_character";
+	doc = "xp_phelan";
+	specializes = mp_townfolk_m_06;	
+	[common]
+	{
+		screen_name = "Phelan the Historian";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = phelan_0;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ro_m_d_c_041;
+			es_feet = bo_bo_le_light;
+			es_forearms = gl_gl_le_f_g_c_avg;
+			es_head = he_ca_ro_green;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+
+[t:template,n:xp_bheele]
+{
+	category_name = "1W_character";
+	doc = "xp_bheele";
+	specializes = merchant_barkeep;
+	[common]
+	{
+		screen_name = "Bheele";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = bheele_0;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+
+[t:template,n:xp_francesca]
+{
+	category_name = "1W_character";
+	doc = "xp_francesca";
+	specializes = mp_townfolk_female_04;
+	[common]
+	{
+		screen_name = "Francesca";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = francesca_0;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+
+[t:template,n:xp_raschel]
+{
+	category_name = "1W_character";
+	doc = "xp_raschel";
+	specializes = mp_townfolk_female_06;
+	[common]
+	{
+		screen_name = "Raschel";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = raschel_0;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+
+[t:template,n:xp_reynard]
+{
+	category_name = "1W_character";
+	doc = "xp_reynard";
+	specializes = mp_townfolk_male_03;
+	[common]
+	{
+		screen_name = "Reynard";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = reynard_0;
+			* = reynard_2;
+			* = reynard_finish;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_xp_reynard.skrit;
+	}
+}
+
+[t:template,n:xp_syrd]
+{
+	category_name = "1W_character";
+	doc = "xp_syrd";
+	specializes = mp_townfolk_male_01;
+	[common]
+	{
+		screen_name = "Syrd";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = syrd_0;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+
+

@@ -1,0 +1,127 @@
+[t:template,n:dsx_zurask_skulleton]
+{
+	category_name = "outdoor";
+	doc = "ds_xp_zurask_skulleton";
+	specializes = non_interactive_blocking;
+	[aspect]{model=m_i_glb_zurask_skull;}
+	[common]
+	{
+	}
+
+}
+
+[t:template,n:dsx_mutant_skulleton]
+{
+	category_name = "outdoor";
+	doc = "ds_xp_mutant_skulleton";
+	specializes = non_interactive_blocking;
+	[aspect] { model=m_i_glb_sk_mutant; }
+	[common]
+	{
+	}
+
+}
+
+[t:template,n:dsx_chain_hook]
+{
+	category_name = "outdoor";
+	doc = "ds_xp_chain_hook";
+	specializes = non_interactive_blocking;
+	[aspect] { model=m_i_glb_chain_hook; }
+	[common]
+	{
+	}
+
+}
+
+[t:template,n:dsx_rax_table]
+{
+	category_name = "outdoor";
+	doc = "ds_xp_rax_table";
+	specializes = non_interactive_blocking;
+	[aspect] { model=m_i_glb_rax_table; }
+	[common]
+	{
+	}
+
+}
+
+[t:template,n:dsx_rax_stonetable]
+{
+	category_name = "outdoor";
+	doc = "ds_xp_rax_stonetable";
+	specializes = non_interactive_blocking;
+	[aspect] { model=m_i_glb_rax_stonetable; }
+	[common]
+	{
+	}
+
+}
+
+[t:template,n:dsx_door_gears]
+{
+	category_name = "outdoor";
+	doc = "ds_xp_door_gears";
+	specializes = non_interactive_blocking;
+	[aspect] { model=m_i_glb_door_gears; }
+	[common]
+	{
+	}
+
+}
+
+[t:template,n:dsx_rax_statue]
+{
+	category_name = "outdoor";
+	doc = "ds_xp_rax_statue";
+	specializes = non_interactive_blocking;
+	[aspect] { model=m_i_glb_rax_statue; }
+	[common]
+	{
+	}
+
+}
+
+[t:template,n:dsx_piston]
+{
+	specializes = non_interactive_nonblocking;
+	doc = "ds_xp_piston";
+	category_name = "indoor";
+
+	[aspect]
+	{
+		model = m_i_glb_piston_setup;
+		material    = button_caddy;
+	}
+
+	[body]
+	{
+		[chore_dictionary]
+		{
+            		chore_prefix = a_i_glb;
+
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = piston_setup-open;
+				}
+			}
+			[chore_close]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = piston_setup-static;
+				}
+			}
+		}
+	}
+	[common] 
+	{ 
+		screen_name = "Vault Door Pistons"; 
+	}
+}
+
+

@@ -1,0 +1,228 @@
+/*
+  ============================================================================
+  ----------------------------------------------------------------------------
+
+	File		: 	job_talk_xp_moht.skrit
+
+	Author(s)	: 	The Nord did some damage
+
+	Purpose		: 	Moht talk skrit (region1)
+
+	(C)opyright 2004 Mad Doc Software, LLC/Gas Powered Games, Inc.
+
+  ----------------------------------------------------------------------------
+  ============================================================================
+*/
+
+Go		m_Go$;
+GoMind	m_Mind$;
+GoBody  m_Body$;
+Job		m_Job$;
+Goid	m_Target$;
+
+#include "k_job_c_mcp_fidget_utils"
+#include "k_job_c_talk_utils"
+
+startup state STARTUP$
+{
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//	init
+
+event OnJobInitPointers$( Job job$ )
+{
+	m_Job$		= job$;
+	m_Go$		= job$.Go;
+	m_Mind$		= job$.Go.Mind;
+	m_Body$		= job$.Go.Body;
+}
+
+
+event OnJobInit$( Job job$ )
+{
+	OnJobInitPointers$( job$ );
+
+	m_Target$	= job$.GoalObject;
+
+	SetState Talk$;  
+}
+
+DropResScroll$(int in_numScrolls$)
+{
+	while( in_numScrolls$>0 )
+	{
+		in_numScrolls$ = in_numScrolls$-1;
+		
+		// drop resurrect scroll
+		SiegePos SpawnPos$;
+			
+		// clone requirements for resurrection scroll
+		GoCloneReq cloneReq$ = MakeGoCloneReq( "scroll_resurrect" );
+
+		SpawnPos$ = m_Target$.go.placement.position;
+		cloneReq$.StartingPos	= SpawnPos$;
+
+		if ( m_Target$.Go.Hasmind )
+		{
+			if( AIQuery.FindSpotRelativeToSource( m_Target$.Go, 1, 1.5, 2.0, m_Target$.Go.Mind.TempPos1 ) )
+			{
+				cloneReq$.StartingPos = m_Target$.Go.Mind.TempPos1;
+			}
+		}	
+		cloneReq$.SnapToTerrain = true;
+	 	Goid scroll$ = GoDb.SCloneGo( cloneReq$ );
+	}
+}
+
+DropGold$(int in_goldAmount$)
+{
+	// drop gold
+	SiegePos SpawnPos$;
+		
+	// give gold nuggets
+	GoCloneReq cloneReq$ = MakeGoCloneReq( "gold" );
+							
+	SpawnPos$ = m_Target$.go.placement.position;
+	cloneReq$.StartingPos	= SpawnPos$;
+						
+	if ( m_Target$.Go.Hasmind )
+	{
+		if( AIQuery.FindSpotRelativeToSource( m_Target$.Go, 1, 1.5, 2.0, m_Target$.Go.Mind.TempPos1 ) )
+		{
+			cloneReq$.StartingPos = m_Target$.Go.Mind.TempPos1;
+		}
+	}	
+	cloneReq$.SnapToTerrain = true;
+ 	Goid gold$ = GoDb.SCloneGo( cloneReq$ );
+ 	// we give lots of gold nuggets to the player
+ 	gold$.Go.Aspect.SetGoldValue(in_goldAmount$);
+}
+
+DropItems$()
+{
+	// set bool showing that user was given items
+	GameAuditor.GetDb.SetBool( "moht_gave_presents", true );
+	DropGold$(2100);	// drop 2100 gold
+	DropResScroll$(3);	// drop three res scrolls
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//	face the audience
+state Face$
+{
+	transition
+	{
+		-> Talk$:	OnWorldMessage( WE_MCP_FACING_LOCKEDON );
+	}
+
+	event OnEnterState$
+	{		
+		if( !m_Go$.HasConversation )
+		{
+			report.errorf( "Actor '%s', scid:0x%08x was told to run job_talk but he doesn't have a conversation component.",
+							m_Go$.GetTemplateName,
+							m_Go$.Goid );
+			SetState Exiting$;
+		}
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );	
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	blab blab away... pretend you're Ian
+state Talk$
+{
+	transition
+	{
+		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) =
+		{
+			if( m_Go$.Mind.ActorAutoFidgets )
+			{
+				StartFidgetIfRequired$();
+			}
+		}
+	}
+	
+	trigger OnWorldMessage$( WE_ANIM_DONE )
+	{
+		TryAnim$('talk');
+	}
+
+	event OnEnterState$
+	{
+		// if the king quest is complete
+		if ( Victory.IsQuestCompleted("xp_king", m_Target$ ) )
+		{
+			 m_Go$.GetConversation.RSSelectConversation( "moht_finish" );
+			 TryAnim$('talk');
+		}
+		// Otherwise, if you have been awarded experience and the gates unlocked
+		else if ( Victory.GetQuestOrder( "xp_king", m_Target$ ) >= 2)
+		{
+			// user has already spoken to moht, no need to give any items
+			if( GameAuditor.GetDb.GetBool( "moht_gave_presents" )==true )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "moht_2" );
+			}
+			// this is the first time talking to moht
+			else
+			{
+				// We give the reward now
+				DropItems$();
+				m_Go$.GetConversation.RSSelectConversation( "moht_2_money" );
+			}
+			TryAnim$('talk');
+		}
+		// you've talked to Rowan but not Kiira
+		else if ( Victory.GetQuestOrder( "xp_king", m_Target$ ) == 1)
+		{
+			// user has already spoken to moht, no need to give any items
+			if( GameAuditor.GetDb.GetBool( "moht_gave_presents" )==true )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "moht_1" );
+			}
+			// this is the first time talking to moht
+			else
+			{
+				// We give the reward now
+				DropItems$();
+				m_Go$.GetConversation.RSSelectConversation( "moht_1_money" );
+			}
+			TryAnim$('talk');
+		}
+		// Last chance...this should be the first time you talk to Moht
+		else if ( Victory.GetQuestOrder( "xp_king", m_Target$ ) == 0)
+		{
+			// if user hasn't spoken to moht, give items
+			if( GameAuditor.GetDb.GetBool( "moht_gave_presents" )==false )
+			{
+				// We give the reward now
+				DropItems$();
+			}
+			m_Go$.GetConversation.RSSelectConversation( "moht_0" );
+			TryAnim$('talk');
+		}
+		// this is here purely for safety sake.
+		else
+		{
+			m_Go$.GetConversation.RSSelectConversation( "xp_error" );
+			TryAnim$('talk');
+		}
+		m_Go$.GetConversation.RSActivateDialogue();
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	finish blabbing
+state Exiting$
+{
+	event OnEnterState$
+	{
+		m_Job$.MarkForDeletion();
+	}
+}
+
+

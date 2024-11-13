@@ -1,0 +1,454 @@
+// Boris, the melee NPC
+[t:template,n:xp_boris]
+{
+	category_name = "1W_character";
+	doc = "xp_boris";
+	specializes = base_pm_fb;
+	[actor]
+    {
+		portrait_icon = b_gui_ig_i_ic_c_andiemus; 
+		[skills]
+		{
+			strength 		= 6.40, 0, 10;
+			dexterity 		= 2.70, 0, 10;
+			intelligence 	= 0.90, 0, 10;
+						
+			melee 			= 10, 0, 0;
+			uber		 	= 10, 0, 0;
+		}
+    }
+	[aspect]
+	{	
+		gold_value = 842;
+		[voice]
+		{
+			[die]	{ priority = high; * = s_v_boris_die; }
+		}
+		[vo_voice]
+		{
+			[select_char]
+			{ 
+				priority = vo; 
+				* = s_v_boris_select_01;
+				* = s_v_boris_select_02;
+				* = s_v_boris_select_03;
+				* = s_v_boris_select_04;
+				* = s_v_boris_select_05;
+				* = s_v_boris_select_06;
+				* = s_v_boris_select_07;
+				* = s_v_boris_select_08;
+				* = s_v_boris_select_09;
+				* = s_v_boris_select_10;
+			}
+			[order_move]
+			{
+				priority = vo; 
+				* = s_v_boris_ack_01;
+				* = s_v_boris_ack_02;
+				* = s_v_boris_ack_03;
+				* = s_v_boris_ack_04;
+				* = s_v_boris_ack_05;
+				* = s_v_boris_ack_06;
+				* = s_v_boris_ack_07;
+				* = s_v_boris_ack_08;
+				* = s_v_boris_ack_09;
+				* = s_v_boris_ack_10;
+			}
+			[order_attack]
+			{
+				priority = vo; 
+				* = s_v_boris_attack_01;
+				* = s_v_boris_attack_02;
+				* = s_v_boris_attack_03;
+				* = s_v_boris_attack_04;
+				* = s_v_boris_attack_05;
+				* = s_v_boris_attack_06;
+				* = s_v_boris_attack_07;
+				* = s_v_boris_attack_08;
+				* = s_v_boris_attack_09;
+				* = s_v_boris_attack_10;
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Boris";
+	}	
+	[conversation]
+	{
+		[conversations]
+		{
+			* = boris_0
+			* = boris_intro;
+			* = boris_hire;
+			* = boris_no_hire;
+			* = boris_no_money;
+			* = boris_dismiss;
+			* = boris_rehire;
+		}
+	}
+   	[inventory]
+	{
+		[equipment]
+		{
+			es_weapon_hand = mc_g_c_f_1h_fun;
+			es_chest = bd_sl_f_g_c_avg;
+			es_forearms = gl_gl_sl_f_g_c_avg;
+			es_feet = bo_bo_le_f_g_c_avg;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_xp_boris.skrit;
+	}
+}
+
+// Erin, the ranged NPC
+[t:template,n:xp_erin]
+{
+	category_name = "1W_character";
+	doc = "xp_erin";
+	specializes = base_pm_fg;	
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_lyssa;
+		[skills]
+		{
+			strength 		=   2.50, 0, 10;
+			dexterity 		=   6.20, 0, 10;
+			intelligence 	=  	1.30, 0, 10;
+			
+			Ranged 			= 	10, 0, 0;
+			uber 			= 	10, 0, 0;
+		}
+	}	
+	[aspect]
+	{
+		gold_value = 800;
+		[textures]
+		{
+			0 = b_c_gan_fg_skin_lyssa;
+			1 = b_c_pos_a1_lyssa;
+		}
+		[voice]
+		{
+			[die]			{ priority = high; * = s_v_erin_die; }
+		}
+		[vo_voice]
+		{
+			[select_char]
+			{ 
+				priority = vo; 
+				* = s_v_erin_select_01;
+				* = s_v_erin_select_02;
+				* = s_v_erin_select_03;
+				* = s_v_erin_select_04;
+				* = s_v_erin_select_05;
+				* = s_v_erin_select_06;
+				* = s_v_erin_select_07;
+				* = s_v_erin_select_08;
+				* = s_v_erin_select_09;
+				* = s_v_erin_select_10;
+			}
+			[order_move]
+			{
+				priority = vo; 
+				* = s_v_erin_ack_01;
+				* = s_v_erin_ack_02;
+				* = s_v_erin_ack_03;
+				* = s_v_erin_ack_04;
+				* = s_v_erin_ack_05;
+				* = s_v_erin_ack_06;
+				* = s_v_erin_ack_07;
+				* = s_v_erin_ack_08;
+				* = s_v_erin_ack_09;
+				* = s_v_erin_ack_10;
+			}
+			[order_attack]
+			{
+				priority = vo; 
+				* = s_v_erin_attack_01;
+				* = s_v_erin_attack_02;
+				* = s_v_erin_attack_03;
+				* = s_v_erin_attack_04;
+				* = s_v_erin_attack_05;
+				* = s_v_erin_attack_06;
+				* = s_v_erin_attack_07;
+				* = s_v_erin_attack_08;
+				* = s_v_erin_attack_09;
+				* = s_v_erin_attack_10;
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Erin";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = erin_0;
+			* = erin_intro;
+			* = erin_hire;
+			* = erin_no_hire;
+			* = erin_no_money;
+			* = erin_dismiss;
+			* = erin_rehire;
+		}
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_ranged_weapon;
+		[equipment]
+		{
+			es_feet = #boots/-no_mod/6-10;
+			es_shield_hand = #bw_g_c_s_s_r_avg;
+		}
+		[other]
+		{
+			il_main = bd_sl_m_g_c_avg;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_xp_erin.skrit;
+	}
+}
+
+// Saul, the Nature Mage
+[t:template,n:xp_saul]
+{
+	category_name = "1W_character";
+	doc = "xp_saul";
+	specializes = base_pm_fb;
+	[actor]
+    {
+		portrait_icon = b_gui_ig_i_ic_c_kr; 
+		[skills]
+		{
+			strength 		= 0.90, 0, 10;
+			dexterity 		= 1.80, 0, 10;
+			intelligence 	= 7.30, 0, 10;
+						
+			nature_magic 	= 10, 0, 0;
+			uber		 	= 10, 0, 0;
+		}
+    }
+	[aspect]
+	{	
+		gold_value = 748;
+		[textures]
+		{
+			0 = b_c_gan_fb_skin_jondar;
+			1 = b_c_pos_a1_jondar;
+		}
+		[voice]
+		{
+			[die]		{ priority = high; * = s_v_saul_die; }
+		}
+		[vo_voice]
+		{
+			[select_char]
+			{ 
+				priority = vo; 
+				* = s_v_saul_select_02;
+				* = s_v_saul_select_03;
+				* = s_v_saul_select_04;
+				* = s_v_saul_select_05;
+				* = s_v_saul_select_06;
+				* = s_v_saul_select_07;
+				* = s_v_saul_select_08;
+				* = s_v_saul_select_09;
+				* = s_v_saul_select_10;
+			}
+			[order_move]
+			{
+				priority = vo; 
+				* = s_v_saul_ack_01;
+				* = s_v_saul_ack_02;
+				* = s_v_saul_ack_03;
+				* = s_v_saul_ack_04;
+				* = s_v_saul_ack_05;
+				* = s_v_saul_ack_06;
+				* = s_v_saul_ack_07;
+				* = s_v_saul_ack_08;
+				* = s_v_saul_ack_09;
+				* = s_v_saul_ack_10;
+			}
+			[order_attack]
+			{
+				priority = vo; 
+				* = s_v_saul_attack_01;
+				* = s_v_saul_attack_02;
+				* = s_v_saul_attack_03;
+				* = s_v_saul_attack_04;
+				* = s_v_saul_attack_05;
+				* = s_v_saul_attack_06;
+				* = s_v_saul_attack_07;
+				* = s_v_saul_attack_08;
+				* = s_v_saul_attack_09;
+				* = s_v_saul_attack_10;
+			}
+		}
+ 	}
+	[common]
+	{
+		screen_name = "Saul";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = saul_0
+			* = saul_intro;
+			* = saul_hire;
+			* = saul_no_hire;
+			* = saul_no_money;
+			* = saul_dismiss;
+			* = saul_rehire;
+		}
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[equipment]
+		{
+			es_feet = #boots/-no_mod/6-10;
+			es_spellbook = book_glb_magic_01;
+			es_chest = bd_ro_m_d_c_003;
+			es_weapon_hand = #sword/5-10;
+		}
+		[other]
+    	{
+			il_active_primary_spell=spell_zap;
+			il_active_secondary_spell=spell_healing_hands;
+			il_main = spell_shock;
+			il_main = spell_healing_wind;
+			il_main = spell_flash;
+    	}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_xp_saul.skrit;
+	}
+}
+
+// xp_kron, now a combat mage
+[t:template,n:xp_kron]
+{
+	category_name = "1W_character";
+	doc = "xp_kron";
+	specializes = base_pm_fb;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_ze;
+		[skills]
+		{
+			strength 		= 1.30, 0, 10;
+			dexterity 		= 1.70, 0, 10;
+			intelligence 	= 7.00, 0, 10;
+
+			combat_magic	= 10, 0, 0;	
+			uber			= 10, 0, 0;
+		}
+		can_level_up = true;
+		race = human;
+	}
+	[aspect]
+	{
+		gold_value = 786;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_06;
+			1 = b_c_pos_a1_010;
+		}
+		[voice]
+		{
+			[die]		{ priority = high; * = s_v_kron_die; }
+		}
+		[vo_voice]
+		{
+			[select_char]
+			{ 
+				priority = vo; 
+				* = s_v_kron_select_02;
+				* = s_v_kron_select_03;
+				* = s_v_kron_select_04;
+				* = s_v_kron_select_05;
+				* = s_v_kron_select_06;
+				* = s_v_kron_select_07;
+				* = s_v_kron_select_08;
+				* = s_v_kron_select_09;
+				* = s_v_kron_select_10;
+			}
+			[order_move]
+			{
+				priority = vo; 
+				* = s_v_kron_ack_01;
+				* = s_v_kron_ack_02;
+				* = s_v_kron_ack_03;
+				* = s_v_kron_ack_04;
+				* = s_v_kron_ack_05;
+				* = s_v_kron_ack_06;
+				* = s_v_kron_ack_07;
+				* = s_v_kron_ack_08;
+				* = s_v_kron_ack_09;
+				* = s_v_kron_ack_10;
+			}
+			[order_attack]
+			{
+				priority = vo; 
+				* = s_v_kron_attack_01;
+				* = s_v_kron_attack_02;
+				* = s_v_kron_attack_03;
+				* = s_v_kron_attack_04;
+				* = s_v_kron_attack_05;
+				* = s_v_kron_attack_06;
+				* = s_v_kron_attack_07;
+				* = s_v_kron_attack_08;
+				* = s_v_kron_attack_09;
+				* = s_v_kron_attack_10;
+			}
+		}
+    }
+	[common]
+	{
+		screen_name = "Kron the Wide";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = kron_0;
+			* = kron_intro;
+			* = kron_hire;
+			* = kron_no_hire;
+			* = kron_no_money;
+			* = kron_dismiss;
+			* = kron_rehire;
+			* = kron_rejected;
+		}
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[equipment]
+		{
+			es_head = he_ca_ro_wizard_01;
+			es_chest = bd_ro_m_d_c_003;
+			es_forearms = gl_gl_le_f_g_c_avg;
+            es_spellbook = book_glb_magic_01;
+		}
+		[other]
+		{			
+			il_active_primary_spell = spell_firespray;
+			il_active_secondary_spell = spell_orb_fire;
+			il_main = spell_fireshot;			
+		}
+	}	
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_xp_kron.skrit;
+	}
+}

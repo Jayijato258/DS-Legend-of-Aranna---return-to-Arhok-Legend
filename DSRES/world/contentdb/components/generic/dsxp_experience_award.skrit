@@ -1,0 +1,100 @@
+////////////////////////////////////////////////////////////////////////////////
+// $Header: $
+//
+//  Gives an experience award, using itself as the weapon passed in to
+//	Rules.AwardExperience
+////////////////////////////////////////////////////////////////////////////////
+
+property string _doc$                = "Gives an award to a person, using itself as the weapon for award type purposes";
+
+// exported properties
+property float experience_amount$	= 500	doc = "Amount to award the actor.";
+property scid scroll_scid_1$ 			doc = "Scid of other scroll to delete 1";
+property scid scroll_scid_2$ 			doc = "Scid of other scroll to delete 2";
+property scid scroll_scid_3$ 			doc = "Scid of other scroll to delete 3";
+// the stat values that we push the character to
+property float melee_stat$ 		= 0	doc = "value player's melee is pushed to";
+property float ranged_stat$		= 0	doc = "value player's ranged is pushed to";
+property float cmagic_stat$		= 0	doc = "value player's combat magic is pushed to";
+property float nmagic_stat$		= 0	doc = "value player's nature magic is pushed to";
+property float int_stat$		= 0	doc = "value player's intelligence is pushed to";
+property float dex_stat$		= 0	doc = "value player's dexterity is pushed to";
+property float str_stat$		= 0	doc = "value player's strength is pushed to";
+
+
+owner = GoSkritComponent;
+
+// wait until the object has entered the world.
+startup state WaitForEnter$
+{
+	trigger OnGoHandleMessage$( WE_ENTERED_WORLD )
+	{
+		// make the scroll invisible
+		owner.Go.Aspect.SetIsVisible(false);
+		// we will be sent a message when it is time to be made visible
+		SetState Waiting$;
+	}
+}
+
+state Waiting$
+{
+	// look at events that this objects recieve.
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{
+		// we receive an activation message when it is time to become visible.
+		if( e$ == WE_REQ_ACTIVATE )
+		{
+		//	Report.generic("setting award visible!\n");
+			owner.Go.Aspect.SetIsVisible(true);
+		}
+		// if we receive the picked_up world event then look to see if the person that picked us up is allowed to have us.
+		else if ( e$ == WE_PICKED_UP )
+		{
+			Goid player$ = msg$.SendFrom;
+			
+			if( !player$.IsValid )
+			{
+				report.Error( "Bad player when trying to award experience.\n" );
+			}
+			
+			// make sure that player is not computer controlled
+			if ( player$.Go.Player.Controller != PC_COMPUTER )
+			{
+				// give experience
+				Rules.AwardExperience( player$, owner.goid, experience_amount$ );
+				
+				// now set the player's base statistic levels
+				player$.Go.Actor.RCSetSkillLevels(str_stat$, int_stat$, dex_stat$);
+				// set melee level
+				Rules.RSSetNaturalSkillLevel(player$, "melee", melee_stat$);
+				// set ranged level
+				Rules.RSSetNaturalSkillLevel(player$, "ranged", ranged_stat$);
+				// set nature magic level
+				Rules.RSSetNaturalSkillLevel(player$, "nature magic", nmagic_stat$);
+				// set combat magic level
+				Rules.RSSetNaturalSkillLevel(player$, "combat magic", cmagic_stat$);
+				
+				// update quest status for the player
+				Victory.RSActivateQuest("xp_king", 2, player$);
+				
+				// and remove myself from the world
+				GoDb.SMarkForDeletion( owner.goid );
+				
+				// and delete 3 other scids
+				if ( scroll_scid_1$.goid.isvalid() )
+				{
+					GoDb.SMarkForDeletion( scroll_scid_1$.goid );
+				}
+				if ( scroll_scid_2$.goid.isvalid() )
+				{
+					GoDb.SMarkForDeletion( scroll_scid_2$.goid );
+				}
+				if ( scroll_scid_3$.goid.isvalid() )
+				{
+					GoDb.SMarkForDeletion( scroll_scid_3$.goid );
+				}								
+				
+			}
+		}
+	}
+}

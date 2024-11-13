@@ -1,0 +1,187 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  hassat_guardian.skrit
+// Author(s):  Jason Dunlop
+//
+// Copyright © 2004 Mad Doc Software, LLC.  All rights reserved.
+//----------------------------------------------------------------------------
+//  $Revision: $              $Date:$
+//----------------------------------------------------------------------------
+//
+// Purpose: To make the hassat fighter guard that player's character
+//
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// public definitions
+
+// reserved tags
+property string			_doc$ = "hassat_guardian";
+property scid	move_scid$			doc = "the gizmo that we move to at the beginning of our guard duty";
+
+
+goid	goid_to_guard$	= 0;
+owner = GoSkritComponent;
+
+
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+/// Support functions
+
+// guard the given target
+guard_character$( goid guardian$, goid target$ )
+{
+	// guard the target
+	guardian$.Go.Mind.Clear( JQ_ACTION );
+	guardian$.Go.Mind.SDoJob( MakeJobReq( JAT_GUARD, JQ_ACTION, QP_FRONT, AO_COMMAND, target$ ) );
+}
+
+// moves a character from their current position to the location of the use point
+move_character$(goid character$, goid waypoint$)
+{
+	// clear the mcp
+	MCPManager.Flush(character$);
+
+	// make sure the waypoint is valid
+	if( waypoint$.IsValid() && character$.IsValid() )
+	{
+		if( waypoint$.Go != NULL && character$.Go != NULL )
+		{
+			// get the location of the use point
+			SiegePos pos$ = waypoint$.Go.Placement.GetPosition();
+
+			// try the move
+			MCPManager.MakeRequest(character$, PL_APPROACH, pos$, 0.0);
+		}
+	}
+}
+
+// sets goid_to_guard$ to the character we should be guarding
+void SetGoidToGuard$()
+{
+	// if the current guarded is set, nothing to do
+	//
+	// @TODO
+	// we may want to check for whether the actor being guarded is currently alive or not
+	// for now we choose a character to guard and that's it. no one else is ever chosen.
+	//
+	if( goid_to_guard$==0 )
+	{
+
+		owner.go.mind.TempGopColl1.Clear;
+	
+		// look for nearby friends
+		owner.go.mind.TempQtColl1.Clear;
+		owner.go.mind.TempQtColl1.Add( QT_GOOD );
+		owner.go.mind.TempQtColl1.Add( QT_ALIVE_CONSCIOUS );
+		owner.go.mind.GetVisible( owner.go.mind.TempQtColl1, owner.go.mind.TempGopColl1 );
+	
+		// get thew toughest guy and guard him.
+		goid_to_guard$ = AIQuery.GetMax( owner.go, QT_SURVIVAL_FACTOR, owner.go.mind.TempGopColl1 ).goid;
+	}
+}
+
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+/// State Machine
+
+// chill here until we get an activate event
+startup state Wait$
+{	
+	// look for activates
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage /*msg$*/ )
+	{	
+		// activate?
+		if(e$ == WE_REQ_ACTIVATE)
+		{
+			// jump into the move state
+			SetState Move$;
+		}
+	}
+	
+	// check that all of our values are set correctly
+	event OnEnterState$
+	{
+		bool stateToDone$ = false;
+		if( move_scid$ == 0 )
+		{
+			report.genericf( "move_scid$ is NULL!\n" );
+			stateToDone$ = true;
+		}
+		// check the scid
+	/*	if( !owner.Goid.IsValid() ) 
+		{
+			report.genericf( "owner$ is invalid!\n" );
+			stateToDone$ = true;
+		}
+	*/
+		if( !move_scid$.goid.isvalid() )
+		{
+			report.genericf( "move_scid$ is invalid!\n" );
+			stateToDone$ = true;
+		}
+		
+		if( stateToDone$ == true )
+		{
+			SetState Done$;
+		}
+	}
+}
+
+// when we enter this state we move to the gizmo move_scid$
+// then we wait until we receive another we_req_activate message
+state Move$
+{
+	// look for activates
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage /*msg$*/ )
+	{	
+		// activate?
+		if(e$ == WE_REQ_ACTIVATE)
+		{
+			// jump into the guard state
+			SetState Guard$;
+		}
+	}
+	
+	event OnEnterState$
+	{
+		// move the hassat to the gizmo
+		move_character$(owner.goid, move_scid$.goid);
+	}	
+}
+
+// start guarding here
+state Guard$
+{
+	// every 5 seconds we check that we are still guarding someone
+	trigger OnTimer$(1)
+	{
+		// this will set goid_to_guard$ to the character we should be guarding
+		SetGoidToGuard$();
+		// if we are alive and not guarding, guard something.
+		if( IsAlive( owner.Go.Aspect.LifeState ) && owner.go.mind.GetFrontActionJat() != JAT_GUARD )
+		{
+			// otherwise, tell hassat to guard the character
+			guard_character$(owner.goid, goid_to_guard$);
+		}
+			
+		// timer so we check over and over who to guard...
+		this.CreateTimer(1, 5);
+	}
+
+	event OnEnterState$
+	{
+		report.genericf("********************\n\nstart guarding me!!\n\n**********************\n");
+		// set the timer for the guarding check.  this will set who we are initially guarding
+		this.CreateTimer(1, 0.2);
+	}
+
+}
+
+// finishing state.  cleans everything up
+state Done$
+{
+	event OnEnterState$
+	{
+	}
+}

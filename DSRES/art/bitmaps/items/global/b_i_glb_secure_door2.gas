@@ -1,0 +1,12 @@
+[t:tsd,n:b_i_glb_secure_door2]
+{
+	b hasalpha = true;
+	layer1texture1 = b_i_glb_secure_door2;
+	layer1alphaarg1 = texture;
+	layer1alphaarg2 = diffuse;
+	layer1alphaop = arg1;
+	layer1colorarg1 = texture;
+	layer1colorarg2 = diffuse;
+	layer1colorop = modulate;
+	i texturedetail = 3;
+}

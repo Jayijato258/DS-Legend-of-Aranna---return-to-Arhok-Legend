@@ -1,0 +1,10 @@
+[t:template,n:xp_staff_broken]
+{
+	category_name = "indoor";
+	doc = "xp_staff_broken";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		model = m_i_glb_broken_staff;
+	}
+}

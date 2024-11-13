@@ -1,0 +1,55 @@
+[t:template,n:frag_xp_emerald_spider_01]
+{
+	doc = "frag_glb_emerald_spider_01";
+	specializes = fragment;
+	[aspect]
+	{
+		model = m_i_glb_frag-emerald_spider-01;
+		textures:0 = b_c_edm_emerald_spider;
+		scale_base = 0.35;
+	}
+}
+[t:template,n:frag_xp_emerald_spider_02]
+{
+	doc = "frag_glb_emerald_spider_02";
+	specializes = fragment;
+	[aspect]
+	{
+		model = m_i_glb_frag-emerald_spider-02;
+		textures:0 = b_c_edm_emerald_spider;
+		scale_base = 0.35;
+	}
+}
+[t:template,n:frag_xp_emerald_spider_03]
+{
+	doc = "frag_glb_emerald_spider_03";
+	specializes = fragment;
+	[aspect]
+	{
+		model = m_i_glb_frag-emerald_spider-03;
+		textures:0 = b_c_edm_emerald_spider;
+		scale_base = 0.35;
+	}
+}
+[t:template,n:frag_xp_emerald_spider_04]
+{
+	doc = "frag_glb_emerald_spider_04";
+	specializes = fragment;
+	[aspect]
+	{
+		model = m_i_glb_frag-emerald_spider-04;
+		textures:0 = b_c_edm_emerald_spider;
+		scale_base = 0.35;
+	}
+}
+[t:template,n:frag_xp_emerald_spider_05]
+{
+	doc = "frag_glb_emerald_spider_05";
+	specializes = fragment;
+	[aspect]
+	{
+		model = m_i_glb_frag-emerald_spider-05;
+		textures:0 = b_c_edm_emerald_spider;
+		scale_base = 0.35;
+	}
+}

@@ -1,0 +1,219 @@
+[effect_script*]
+{
+	name	=xp_raks_blast;
+
+	script	=[[
+	
+			sound play s_e_attack_fire_elemental_SED at #TARGET_POSITION dist 25 30;
+
+			sfx create orbiter #SOURCE
+				"radius(0)color0(1,1,.6)scale(.5)dur(1.6)tin(.5)tout(.3)";
+			sfx attach_point #PEEK left_hand target;
+			sfx start #POP;
+
+			sfx create orbiter #SOURCE
+				"radius(0)color0(1,1,.6)scale(.5)dur(1.6)tin(.5)tout(.3)";
+			sfx attach_point #PEEK right_hand target;
+			sfx start #POP;
+
+			sfx create fireb #SOURCE
+				"must_update()dur(1.3)offset(0,0,.5)color0(1,.7,.5)velocity(0,3,100)
+				accel(0,-30,-10)cvel(1)ts(.6)light_freq(0)alphafade(1)
+				lower_r0(0)lower_r1(6)upper_r0(10)upper_r1(50)count(50)
+				flamesize(2)";
+			sfx attach_point #PEEK left_hand target;
+			sfx friendly party #PEEK;
+			sfx start #POP;
+
+			sfx create fireb #SOURCE
+				"must_update()dur(1.3)offset(0,0,.5)color0(1,.35,.14)velocity(0,3,100)
+				accel(0,-30,-10)cvel(1)ts(.6)light_freq(0)alphafade(1)
+				lower_r0(0)lower_r1(6)upper_r0(10)upper_r1(50)count(50)
+				flamesize(4)";
+			sfx attach_point #PEEK left_hand target;
+			sfx friendly party #PEEK;
+			sfx start #POP;
+
+			sfx create fireb #SOURCE
+				"must_update()dur(1.3)offset(0,0,.5)color0(1,.7,.5)velocity(0,3,100)
+				accel(0,-30,-10)cvel(1)ts(.6)light_freq(0)alphafade(1)
+				lower_r0(0)lower_r1(6)upper_r0(10)upper_r1(50)count(50)
+				flamesize(2)";
+			sfx attach_point #PEEK right_hand target;
+			sfx friendly party #PEEK;
+			sfx start #POP;
+
+			sfx create fireb #SOURCE
+				"must_update()dur(1.3)offset(0,0,.5)color0(1,.35,.14)velocity(0,3,100)
+				accel(0,-30,-10)cvel(1)ts(.6)light_freq(0)alphafade(1)
+				lower_r0(0)lower_r1(6)upper_r0(10)upper_r1(50)count(50)
+				flamesize(4)";
+			sfx attach_point #PEEK right_hand target;
+			sfx friendly party #PEEK;
+			sfx start #POP;
+			pause 3;
+
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+
+		]];
+}
+
+[effect_script*]
+{
+	name	= xp_raks_statue_eye;
+
+	script	=[[
+
+			set $color 0.9,0,0;
+
+			sfx create orbiter #SOURCE 
+				"must_update()scale(1.52)tin(0)tout(1)color0($color)
+				radius(0)invisible()";
+			set $orb #PEEK;
+			sfx start #POP;
+	
+//			sfx create cylinder #SOURCE
+//				"must_update()alpha(.1)hp0(0,1,1)hp1(-0.5,-0.5,0)rp1(.3,.3,0)
+//				rp0(0,1,2)texture(b_sfx_lightray_01)spin(2)color0($color)scale(1.6)rotate(90,90,90)";
+//			sfx rat #PEEK;
+//			sfx target #PEEK $orb;
+//			sfx start #POP;
+			
+//			sfx create cylinder #SOURCE
+//				"must_update()alpha(.1)hp0(0,1,1)hp1(-0.5,-0.5,0)rp1(.3,.3,0)
+//				rp0(0,2,2)texture(b_sfx_lightray_02)spin(-1)scale(1.6)
+//				color0($color)";
+//			sfx rat #PEEK;
+//			sfx target #PEEK $orb;
+//			sfx start #POP;
+
+			pause .3;
+
+			sfx create orbiter #SOURCE 
+				"must_update()scale(2.52)tin(0)tout(1)color0($color)
+				radius(0)";
+			sfx start #POP;
+	
+			sfx create orbiter #SOURCE 
+				"must_update()texture(b_sfx_sparkle01)scale(2.5)
+				tin(0)tout(.1)color0($color)radius(0)";
+			sfx start #POP;
+			]];
+}
+
+[effect_script*]
+{
+	name	=xp_statue_pillar;
+
+	script	=[[
+//			sound play s_e_spell_recharge_party_cast at #SOURCE_POSITION dist 3 20;
+			
+//			sfx create orbiter #TARGET
+//				"radius(0)[0]color0(.7,.7,1)dur(5)vdisplace(-.875)
+//			scale(3)";
+				
+//			sfx start #POP;
+
+			sfx create cylinder #TARGET
+				"hp0(10,-3,-5.1)hp1(15,8,-1.0)rp1(.5,1.0,.05)rp0(0,2.3,.23)dur(13.5)
+				texture(b_sfx_lightray_01)spin(0.5)color0(0.6,0.6,1.0)alpha(0.2)[0]";
+			sfx start #POP;
+			
+			sfx create cylinder #TARGET
+				"hp0(10,-3,-5.1)hp1(15,8,-1.0)rp1(0,0,0)rp0(0,3.7,.37)dur(7.5)
+				texture(b_sfx_lightray_02)spin(-0.5)color0(1,1,.7)alpha(0.2)[0]";	
+			sfx start #POP;
+
+			sfx create lightsource #TARGET
+				"color0(1,1,1)dur(10)tin(3.5)tout(.5)radius(8)[0]";
+			sfx start #POP;
+			
+			
+//			sfx create spe #TARGET 
+//				"color0(.3,.3,.2)texture(b_sfx_star_01)radius(.6)scale(.2)
+//				count(40)dur(5)index0(0,-1.57,1.57)index1(0,-1.57,1.57)
+//				speed0(5,1,5)speed1(5,1,5)space0(.0628,.01256,.0628)
+//				space1(.0628,.01256,.0628)[0]";
+//			sfx start #POP;
+
+			pause 3.0;
+
+			// initial fire
+			sfx create fire #TARGET
+				"color0(0.8,0.8,1.0)color1(0.1,0.1,0)accel(0,20,0)velocity(0,20,0)
+				alphafade(1.0)dur(10.5)ts(0.1)scale(2)max_radius(2.0)
+				max_iradius(0.4)radius_rmax(3.0)[0]";	
+//			sfx snap_to_ground #PEEK;
+			sfx start #POP;
+			
+			sfx create explosion #TARGET
+				"srate(0.03)texture(b_sfx_sparkle01)dur(4)color0(.75,.6,.3)
+				color1(.2,.2,1)rvel(2,.66,2)count(16)[0]";			
+			sfx start #POP;
+			
+			pause 3.75;
+
+			worldmsg WE_SPELL_SYNC_MID #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+			
+			pause 2;
+
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+
+			]];
+}
+
+[effect_script*]
+{
+	name	=xp_statue_surround;
+
+	script	=[[	
+	
+
+//			sound play s_e_spell_holdcreature_cast at #SOURCE_POSITION dist 3 20;
+			
+//			sfx create orbiter #TARGET 
+//				"delay(5)tin(1)scale(.6)offset(0,1.5,0)texture(b_sfx_sparkle01)
+//				color0(1,.1,.4)radius(0)";
+//			set $orb #POP;
+//			sfx start $orb;
+					
+			set $time_out 15;
+			pause .5;
+			
+			call xp_statue_pillar s<offset(2,0,0)>;
+			pause .02;
+			call xp_statue_pillar s<offset(1.848,0,.765)>;
+			pause .02;
+			call xp_statue_pillar s<offset(1.414,0,1.414)>;
+			pause .02;
+			call xp_statue_pillar s<offset(.765,0,1.848)>;
+			pause .02;
+			call xp_statue_pillar s<offset(0,0,2)>;
+			pause .02;
+			call xp_statue_pillar s<offset(-.765,0,1.848)>;
+			pause .02;
+			call xp_statue_pillar s<offset(-1.414,0,1.414)>;
+			pause .02;
+			call xp_statue_pillar s<offset(-1.848,0,.765)>;
+			pause .02;
+			call xp_statue_pillar s<offset(-2,0,0)>;
+			pause .02;
+			call xp_statue_pillar s<offset(-1.848,0,-.765)>;
+			pause .02;
+			call xp_statue_pillar s<offset(-1.414,0,-1.414)>;
+			pause .02;
+			call xp_statue_pillar s<offset(-.765,0,-1.848)>;
+			pause .02;
+			call xp_statue_pillar s<offset(0,0,-2)>;
+			pause .02;
+			call xp_statue_pillar s<offset(.765,0,-1.848)>;
+			pause .02;
+			call xp_statue_pillar s<offset(1.414,0,-1.414)>;
+			pause .02;
+			call xp_statue_pillar s<offset(1.848,0,-.765)>;
+			
+			pause 10;
+			
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
