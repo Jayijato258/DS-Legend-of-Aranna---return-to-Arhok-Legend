@@ -5,7 +5,7 @@
 
 # what is it about :
 
-This is a community effort to change the storyline and give a real sequel worthy of the name to Legend of Aranna.
+This is a community effort to change the storyline of the Return to Ahrok expansion and give a true sequel worthy of the name to Legend of Aranna.
 
 # Roadmap
 
