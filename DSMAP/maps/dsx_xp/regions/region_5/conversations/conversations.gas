@@ -1,0 +1,28 @@
+[king_6]
+{
+	[text*]
+	{
+		screen_text = "You may return in peace to your town.";
+		f scroll_rate = 20.0000;
+	}
+}
+[king_5]
+{
+	[text*]
+	{
+		sample = s_v_xp_king_5;
+		screen_text = "You must kill Raks to free me.";
+		f scroll_rate = 20.0000;
+	}
+}
+
+[outro_1]
+{
+	[text*]
+	{
+		quest_dialog = true;
+		sample = s_v_xp_king_6;
+		screen_text = "Thank you. You act nobly, even though you have the aspect of the cursed humans. Although I have often railed against your kind, perhaps time enough has passed for us to live together. I shall return to my lands and tell my subjects of your help and your valor, and perhaps sometime in the future we can stand in battle side by side.";
+		f scroll_rate = 3.7500;
+	}
+}

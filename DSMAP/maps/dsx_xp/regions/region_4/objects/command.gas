@@ -1,0 +1,189 @@
+[t:cmd_ai_c_patrol,n:0x00400257]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00400254;
+	}
+	[placement]
+	{
+	  p position = 0.954325,-2,4.89462,0x927d8cf2;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00400258]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00400256;
+	}
+	[placement]
+	{
+	  p position = 3.35823,-2,4.89672,0x927d8cf2;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00400259]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00400255;
+	}
+	[placement]
+	{
+	  p position = 5.4768,-2,5.09094,0x927d8cf2;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00400254]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00400257;
+	}
+	[placement]
+	{
+	  p position = 1.21043,-2,-0.147686,0x228ef78e;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00400255]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00400259;
+	}
+	[placement]
+	{
+	  p position = 5.67224,-2,-0.0369625,0x228ef78e;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00400256]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00400258;
+	}
+	[placement]
+	{
+	  p position = 3.26078,-2,-0.203885,0x228ef78e;
+	}
+}
+[t:cmd_region_message,n:0x004003a6]
+{
+	[placement]
+	{
+	  q orientation = 0,2.74658e-007,0,1;
+	  p position = 1.05,0.5,4.52195,0x796456ba;
+	}
+	[screen_report]
+	{
+		description = "'I can sense you, human. You do not belong here. Return and await your fate with dignity.'";
+	  b prepend_name = false;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00400262]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00400260;
+	}
+	[placement]
+	{
+	  p position = 5.50206,-2,3.16886,0x028cc166;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00400263]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00400261;
+	}
+	[placement]
+	{
+	  p position = 0.629686,-2,3.2277,0x028cc166;
+	}
+}
+[t:animate_object,n:0x0040039a]
+{
+	[animate_object]
+	{
+		chore = chore_open;
+		chore_inactive = chore_close;
+	  x target = 0x00400085;
+	}
+	[placement]
+	{
+	  p position = 3.25886,-2,5.82574,0x028cc166;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00400260]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00400262;
+	}
+	[placement]
+	{
+	  p position = 1.93433,0,-1.10807,0x8e53ace0;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00400261]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00400263;
+	}
+	[placement]
+	{
+	  p position = -2.53644,0,-1.14523,0x8e53ace0;
+	}
+}
+[t:cmd_region_message,n:0x004003ce]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.933489,0,0.95623,0x4b5eda62;
+	}
+	[screen_report]
+	{
+		description = "'Those mangy cats are not so persistent as you. They at least have the sense to run away from their doom.''";
+	  b prepend_name = false;
+	}
+}
+[t:animate_object,n:0x004003d4]
+{
+	[animate_object]
+	{
+		chore = chore_open;
+		chore_inactive = chore_close;
+	  x target = 0x004003A2;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.537405,-2,2.02358,0x17ad1b14;
+	}
+}
+[t:animate_object,n:0x004003d2]
+{
+	[animate_object]
+	{
+		chore = chore_open;
+		chore_inactive = chore_close;
+	  x target = 0x004003D0;
+	}
+	[placement]
+	{
+	  q orientation = 0,2.01166e-007,0,1;
+	  p position = 3.26636,-2,5.63743,0x9b59dd26;
+	}
+}
+[t:cmd_region_message,n:0x004003af]
+{
+	[placement]
+	{
+	  p position = -2.25557,0,-0.509124,0xe483e0f2;
+	}
+	[screen_report]
+	{
+		description = "'Your death awaits you below. Do you hope to survive? Fool.'";
+	  b prepend_name = false;
+	}
+}

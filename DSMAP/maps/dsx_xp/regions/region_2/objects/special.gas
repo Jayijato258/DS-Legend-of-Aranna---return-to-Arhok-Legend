@@ -1,0 +1,379 @@
+[t:trigger_generic,n:0x0020007e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("dsx_xp_region_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,1.000000,5.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.721281,0,0.0852287,0xec1efffb;
+	}
+}
+[t:use_point,n:0x00200104]
+{
+	[placement]
+	{
+	  p position = 2.74334,0,-3.86107,0xa40fa8fd;
+	}
+}
+[t:use_point,n:0x00200105]
+{
+	[placement]
+	{
+	  p position = 1.44954,0,-3.15809,0xa40fa8fd;
+	}
+}
+[t:use_point,n:0x00200106]
+{
+	[placement]
+	{
+	  p position = 1.9397,0,-0.704472,0xa40fa8fd;
+	}
+}
+[t:set_quest_bits,n:0x00200019]
+{
+	[placement]
+	{
+	  p position = 0.415165,0,1.12779,0x28664f6c;
+	}
+	[set_quest_bits]
+	{
+		bool_variable = "xp_king_activate_disp";
+	}
+}
+[t:trigger_fade_secret_area_box,n:0x0020001e]
+{
+	[common]
+	{
+		dev_instance_text = "TURN OFF PARTICLE SHOOTERS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x0020001C,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x00200025,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x00200023,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x00200024,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.461749,0,0.887011;
+	  p position = -3.20924,0.29,-0.409054,0x938ce87c;
+	}
+}
+[t:trigger_fade_secret_area_box,n:0x00200026]
+{
+	[common]
+	{
+		dev_instance_text = "TURN ON PARTICLE SHOOTERS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0020001C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00200025,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00200023,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00200024,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.0436194,0,0.999049;
+	  p position = -3.26824,0.29,0.397762,0x938ce87c;
+	}
+}
+[t:use_point,n:0x00200107]
+{
+	[placement]
+	{
+	  p position = -1.08678,0,-1.40711,0x9442c81a;
+	}
+}
+[t:use_point,n:0x00200108]
+{
+	[placement]
+	{
+	  p position = 1.05165,-4.76837e-007,0.060606,0x9442c81a;
+	}
+}
+[t:trigger_fade_secret_area_box,n:0x00200002]
+{
+	[common]
+	{
+		dev_instance_text = "CHECK QUEST BITS FOR LIGHTS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00200016,0f,"0x4002","every",0), doc("lights");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.500000,1.000000,2.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x001000BF,0f,"0x4002","every",0), doc("map marker");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.500000,1.000000,2.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x0020001D,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.500000,1.000000,2.500000,"on_every_last_leave"), doc("lights out");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("arhok");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.500000,1.000000,2.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = -0.0100317,4.911,-0.079722,0x2f7489f4;
+	}
+}
+[t:check_quest_bits,n:0x00200016]
+{
+	[check_quest_bits]
+	{
+		bool_variable = "xp_king_activate_disp";
+	  i level = 1;
+		map_name = "dsx_xp";
+	  i object = 1;
+	  i region = 2;
+	  i section = 96;
+	  x send_to_scid = 0x0020001D;
+	}
+	[common]
+	{
+		dev_instance_text = "QBIT CHECKER FOR DISP LIGHTS";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.743145,0,0.669131;
+	  p position = -0.636979,4.35531,-1.76943,0x2f7489f4;
+	}
+}
+[t:use_point,n:0x00200018]
+{
+	[placement]
+	{
+	  p position = 1.49988,4.3159,-0.114245,0x2f7489f4;
+	}
+}
+[t:check_quest_bits,n:0x0020001b]
+{
+	[check_quest_bits]
+	{
+		bool_variable = "xp_king_activate_disp";
+	  i level = 1;
+		map_name = "dsx_xp";
+	  i object = 1;
+	  i region = 2;
+	  i section = 96;
+	  x send_to_scid = 0x0020001A;
+	}
+	[common]
+	{
+		dev_instance_text = "QBIT CHECKER FOR ELEVATOR ACTIVATION";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.99863,0,-0.0523361;
+	  p position = 0.253651,4.3159,-1.81594,0x2f7489f4;
+	}
+}
+[t:trigger_fade_secret_area_box,n:0x0020001d]
+{
+	[common]
+	{
+		dev_instance_text = "SWITCHER FOR DISP LIGHTS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0020001F,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00200022,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00200021,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00200020,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x00200022,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x00200021,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x00200020,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x0020001F,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_deactivate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.694658,0,0.71934;
+	  p position = -2.79219,4.3159,0.0209566,0x2f7489f4;
+	}
+}
+[t:use_point,n:0x00200111]
+{
+	[placement]
+	{
+	  p position = -1.08536,4.3159,-0.107232,0x2f7489f4;
+	}
+}
+[t:trigger_generic,n:0x00200112]
+{
+	[common]
+	{
+		dev_instance_text = "HASSAT MOVES HERE";
+	}
+	[placement]
+	{
+	  p position = -0.0280393,4.3159,2.03472,0x2f7489f4;
+	}
+}
+[t:use_point,n:0x0020010a]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.540015,0,-1.07099,0xe285cbf2;
+	}
+}
+[t:use_point,n:0x00200109]
+{
+	[placement]
+	{
+	  p position = -0.111021,0,-1.65312,0xf4a26c5c;
+	}
+}
+[t:use_point,n:0x0020013b]
+{
+	[placement]
+	{
+	  p position = 0.208893,9.53674e-007,0.138229,0x94e342a5;
+	}
+}
+[t:use_point,n:0x00200049]
+{
+	[placement]
+	{
+	  p position = 0.168497,0,3.06486,0x1a582413;
+	}
+}
+[t:use_point,n:0x002000f7]
+{
+	[placement]
+	{
+	  p position = 1.69098,0,-0.562496,0x1a582413;
+	}
+}
+[t:use_point,n:0x00200100]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.4818,0,3.53226,0x1a582413;
+	}
+}

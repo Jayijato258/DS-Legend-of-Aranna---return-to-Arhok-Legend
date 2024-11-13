@@ -1,0 +1,61 @@
+[t:emt_sound_act,n:0x00500046]
+{
+	[placement]
+	{
+	  p position = -1.87263,0,1.12053,0x607fb13b;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "xp_raks4";
+	  b is_global = true;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x00500047]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.44796,0,-1.93499,0x33309fa5;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_hassat_growl_long";
+	  b is_global = true;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_glow,n:0x00500007]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -18.9329,37.8932,-2.70988,0xf6c8b82e;
+	}
+}
+[t:emt_glow,n:0x00500008]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -21.0466,37.8932,-2.71195,0xf6c8b82e;
+	}
+}
+[t:emt_glow,n:0x00500009]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -21.0259,37.8932,-0.612491,0xf6c8b82e;
+	}
+}
+[t:emt_glow,n:0x0050000a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -18.9416,37.8932,-0.620839,0xf6c8b82e;
+	}
+}

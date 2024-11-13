@@ -1,0 +1,19 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x00000001;
+	source_region_name = region_1;
+	[t:stitch_editor,n:region_2]
+	{
+		dest_region = region_2;
+		[node_ids]
+		{
+			0x69010201 = 0x272DBA6B,3;
+			0x69010202 = 0x5311B65B,1;
+			0x69010203 = 0x2700B963,2;
+			0x69010204 = 0x136AFEEB,4;
+			0x69010205 = 0xA1A8D517,4;
+			0x69010206 = 0xA1A8D517,5;
+			0x69010207 = 0x2075B3E9,2;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+[t:region,n:region]
+{
+	created = assclown,chris;
+	description = "none";
+  x guid = 0x00000003;
+	lastmodified = ASSCLOWN,Chris;
+  x mesh_range = 0x00000003;
+	notes = none;
+  x scid_range = 0x00000003;
+	se_version = 2.0.0.370;
+}

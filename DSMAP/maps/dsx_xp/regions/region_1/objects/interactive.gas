@@ -1,0 +1,539 @@
+[t:dsx_sign_arhok_blacksmith,n:0x00100223]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[common]
+	{
+		screen_name = "Lharnob's Forge";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.544639,0,0.838671;
+	  p position = -6.60127,-4.82687,-3.94418,0x2a5d7be4;
+	}
+}
+[t:door_grs_peasant_left,n:0x00100332]
+{
+	[body]
+	{
+	  f max_move_velocity = 0.6;
+	  f min_move_velocity = 0.6;
+	}
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x001000BB;
+		msg_type_opening = we_trigger_activate;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707108,0,0.707108;
+	  p position = -3.54984,-5.15,-2.39545,0x2a5d7be4;
+		use_point_scids = 0x00100390,0x00100394;
+	}
+}
+[t:door_grs_peasant_right,n:0x0010033d]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[body]
+	{
+	  f max_move_velocity = 0.6;
+	  f min_move_velocity = 0.6;
+	}
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x001000BB;
+		msg_type_opening = we_trigger_activate;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.54839,-5.15433,0.406006,0x2a5d7be4;
+		use_point_scids = 0x00100390,0x00100394;
+	}
+}
+[t:door_grs_peasant_left,n:0x00100341]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x0010007C;
+		msg_type_opening = we_trigger_activate;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-2.23517e-007;
+	  p position = 1.80103,-3.15,7.94827,0x2a5d7be4;
+		use_point_scids = 0x0010038f,0x00100395;
+	}
+}
+[t:door_ice_peasant_right,n:0x001003aa]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.05;
+	}
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x00100083;
+		msg_type_opening = we_trigger_activate;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.965926,0,-0.258819;
+	  p position = -2.57051,-3.62192,-2.03953,0x4bc2a5ad;
+		use_point_scids = 0x00100393,0x00100392;
+	}
+}
+[t:lever_glb_04,n:0x0010000c]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x00100037;
+	  f on_message_delay = 1;
+	  x on_scid = 0x00100037;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.594823,0,0.803857;
+	  p position = -3.01631,1.71885,1.68279,0xb784a3ac;
+		use_point_scids = 0x0010001d,0x0010000f;
+	}
+}
+[t:lever_glb_04,n:0x0010000b]
+{
+	[aspect]
+	{
+	  f use_range = 2;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x00100037;
+	  f on_message_delay = 1;
+	  x on_scid = 0x00100037;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.300706,0,-0.953717;
+	  p position = -1.62572,12.3757,2.31927,0x44b02294;
+		use_point_scids = 0x0010001e,0x00100016,0x0010000f;
+	}
+}
+[t:xp_ice_gate_left,n:0x00100003]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,1.56462e-007;
+	  p position = -0.021637,-6,0.8853,0x25d3305a;
+	}
+}
+[t:xp_ice_gate_right,n:0x00100004]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.2666e-007;
+	  p position = -0.0196075,-6,0.879753,0x25d3305a;
+	}
+}
+[t:door_ice_peasant_left,n:0x00100230]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x00100385;
+		msg_type_opening = we_trigger_activate;
+	}
+	[placement]
+	{
+	  q orientation = -1.86265e-009,-0.983256,1.49012e-008,-0.182235;
+	  p position = 1.5172,-2.95,-0.699219,0xb49a4d27;
+		use_point_scids = 0x001003a1,0x001003a2;
+	}
+}
+[t:door_ice_peasant_left,n:0x001003a3]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x001000A3;
+		msg_type_opening = we_trigger_activate;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-2.08616e-007;
+	  p position = 0.952499,-1.5,-7.75215,0x251f9f82;
+		use_point_scids = 0x0010038e,0x001003a4;
+	}
+}
+[t:dsx_sign_arhok_mage,n:0x00100229]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.566406,0,-0.824126;
+	  p position = 1.98994,0.00100517,-0.621635,0xedcb7f4b;
+	}
+}
+[t:xp_ice_gate_left,n:0x00100001]
+{
+	[placement]
+	{
+	  p position = -0.00115204,-6,0.899078,0x5a4aa7de;
+	}
+}
+[t:xp_ice_gate_right,n:0x00100002]
+{
+	[placement]
+	{
+	  p position = 0.043541,-6,0.915588,0x5a4aa7de;
+	}
+}
+[t:lever_glb_04,n:0x0010003b]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x00100041;
+	  f on_message_delay = 1;
+	  x on_scid = 0x00100041;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.594823,0,0.803857;
+	  p position = -3.01632,1.75557,1.6828,0x7762d2ce;
+		use_point_scids = 0x0010003e,0x0010003c;
+	}
+}
+[t:dsx_sign_arhok,n:0x0010022b]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.99863,0,0.0523356;
+	  p position = 3.84068,5.78165e-006,-1.4534,0x3d2b374d;
+	}
+}
+[t:barrier_breakable_01,n:0x00100101]
+{
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -3.42888,1.19209e-007,-0.993546,0x224149f3;
+	}
+}
+[t:barrier_breakable_01,n:0x00100251]
+{
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -3.42888,1.19209e-007,1.54024,0x224149f3;
+	}
+}
+[t:lever_glb_04,n:0x00100047]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x00100057;
+	  f on_message_delay = 1;
+	  x on_scid = 0x00100057;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.594823,0,0.803857;
+	  p position = -3.01632,1.67389,1.68279,0xc521c3bf;
+		use_point_scids = 0x0010004c,0x00100048;
+	}
+}
+[t:lever_glb_06_message,n:0x0010038d]
+{
+	[common]
+	{
+		screen_name = "Displacer Transport Switch";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+		off_message_2 = we_req_activate;
+	  x off_scid = 0x0010039E;
+	  x on_scid = 0x0010039E;
+	  f reset_time = 30;
+	  f reset_time_2 = 30;
+	}
+	[placement]
+	{
+	  q orientation = -0.270617,0.653273,0.653273,0.270617;
+	  p position = 0.0317322,6.457,-0.15494,0xe466f572;
+		use_point_scids = 0x0010039c,0x0010039b;
+	}
+}
+[t:dsx_utraean_obj_01,n:0x00100212]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.5;
+	}
+	[common]
+	{
+		screen_name = "'Storage Cave'";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.358368,0,0.93358;
+	  p position = 3.8498,0,-0.88298,0xa570fdf3;
+	}
+}
+[t:dsx_utraean_obj_01,n:0x00100211]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.5;
+	}
+	[common]
+	{
+		screen_name = "'Halls of the Lost'";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.390731,0,0.920505;
+	  p position = 3.56145,0,-2.6016,0xa7cf33da;
+	}
+}
+[t:door_ice_peasant_left,n:0x0010032c]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x001000AD;
+		msg_type_opening = we_trigger_activate;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.49012e-007;
+	  p position = 1.70092,-3.65,-3.14927,0x59511f8b;
+		use_point_scids = 0x00100391;
+	}
+}
+[t:door_glb_stormdoor_01,n:0x001002d1]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	  b is_selectable = false;
+	  b is_usable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0.207912,6.0711e-008,1.05971e-009,0.978148;
+	  p position = -0.173935,0.6947,-1.33668,0xe523fdca;
+	}
+}
+[t:door_glb_stormdoor_02,n:0x0010030f]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	  b is_selectable = false;
+	  b is_usable = false;
+	}
+	[placement]
+	{
+	  q orientation = -0.207912,0,0,-0.978148;
+	  p position = 0.241127,0.678156,-1.36391,0xe523fdca;
+	}
+}
+[t:lever_glb_04,n:0x00100027]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x00100006;
+	  f on_message_delay = 1;
+	  x on_scid = 0x00100006;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.594823,0,0.803857;
+	  p position = -3.01632,1.68548,1.68279,0xd8d6c83e;
+		use_point_scids = 0x00100030,0x00100028;
+	}
+}
+[t:lever_glb_04,n:0x00100026]
+{
+	[aspect]
+	{
+	  f use_range = 2;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x00100006;
+	  f on_message_delay = 1;
+	  x on_scid = 0x00100006;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.300705,0,0.953717;
+	  p position = -1.6307,12.4241,2.32454,0xa27a71eb;
+		use_point_scids = 0x00100033,0x00100029,0x00100028;
+	}
+}
+[t:sign_ice_inn_03,n:0x0010013b]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[common]
+	{
+		screen_name = "The Bubberjack Inn";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.983255,0,-0.182236;
+	  p position = -2.72744,-2.64975,-10.7091,0xc122c998;
+	}
+}
+[t:door_grs_peasant_left,n:0x0010033e]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x0010013D;
+		msg_type_opening = we_trigger_activate;
+	}
+	[placement]
+	{
+	  p position = -6.99905,-1,-7.94875,0xc122c998;
+		use_point_scids = 0x00100397,0x00100398;
+	}
+}
+[t:sign_ice_barn_02,n:0x00100122]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[common]
+	{
+		screen_name = "Raab's Corral";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 4.98891,-1.59991,-3.08847,0x12cc0ed5;
+	}
+}
+[t:door_grs_peasant_left,n:0x0010012a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -4.80577,-1.4,-1.79469,0x0622b87d;
+		use_point_scids = 0x001003ac;
+	}
+}
+[t:door_grs_peasant_right,n:0x0010012c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -4.95144,-1.4,5.80047,0x0622b87d;
+		use_point_scids = 0x001003ab;
+	}
+}
+[t:door_grs_peasant_left,n:0x0010012f]
+{
+	[placement]
+	{
+	  p position = 1.88613,-1.4,0.782209,0x0622b87d;
+		use_point_scids = 0x001003ad;
+	}
+}
+[t:lever_glb_06_message,n:0x001003b8]
+{
+	[common]
+	{
+		screen_name = "Displacer Transport Switch";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+		off_message_2 = we_req_activate;
+	  x off_scid = 0x001003BC;
+	  x on_scid = 0x001003BC;
+	  f reset_time = 30;
+	  f reset_time_2 = 30;
+	}
+	[placement]
+	{
+	  q orientation = -0.270617,0.653273,0.653273,0.270617;
+	  p position = 0.0293282,6.45189,-0.142309,0x1db16c2d;
+		use_point_scids = 0x001003ba,0x001003b9;
+	}
+}
+[t:lever_glb_04,n:0x00100046]
+{
+	[aspect]
+	{
+	  f use_range = 2;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x00100057;
+	  f on_message_delay = 1;
+	  x on_scid = 0x00100057;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.300706,0,-0.953717;
+	  p position = -1.64788,12.4529,2.30795,0xe17d3a23;
+		use_point_scids = 0x00100056,0x00100049,0x00100048;
+	}
+}
+[t:lever_glb_04,n:0x0010003a]
+{
+	[aspect]
+	{
+	  f use_range = 2;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x00100041;
+	  f on_message_delay = 1;
+	  x on_scid = 0x00100041;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.300706,0,-0.953717;
+	  p position = -1.65019,12.4669,2.29787,0xc1762233;
+		use_point_scids = 0x00100040,0x0010003d,0x0010003c;
+	}
+}

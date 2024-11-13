@@ -1,0 +1,112 @@
+[t:gen_bush_snow-klaw,n:0x002000db]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "xp_werewolf";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382684;
+	  p position = 1.4822,0,2.22635,0xe08ca120;
+	}
+}
+[t:gen_bush_snow-klaw,n:0x002000e0]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "xp_werewolf";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.819152,0,0.573576;
+	  p position = -3.88903,0,-1.58105,0xa170c96a;
+	}
+}
+[t:gen_bush_snow-klaw,n:0x002000e3]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "xp_werewolf";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.991445,0,0.130526;
+	  p position = -1.28654,-5.96294,-1.2331,0x74510339;
+	}
+}
+[t:gen_bush_snow-klaw,n:0x002000e4]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "xp_werewolf";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 1.97156,0,0.0544167,0x3163f884;
+	}
+}
+[t:gen_bush_snow-klaw,n:0x002000e2]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "xp_werewolf";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.766045,0,0.642788;
+	  p position = -1.23907,0,-0.745773,0x80e58aba;
+	}
+}
+[t:gen_bush_snow-klaw,n:0x002000e1]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "xp_werewolf";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.737278,0,-0.675591;
+	  p position = 3.24976,0,-1.7342,0x3bd05f05;
+	}
+}
+[t:gen_bush_snow-klaw,n:0x002000de]
+{
+	[generator_advanced_a2]
+	{
+	  i max_alive_children = 0;
+	  i num_children_incubating = 0;
+	  f spawn_period = 0;
+	  f spawn_range = 0;
+	  f trigger_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.866026,0,0.5;
+	  p position = -1.33872,0,-2.33433,0x7ab27fb7;
+	}
+}
+[t:gen_bush_snow-klaw,n:0x002000dc]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "xp_werewolf";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.5,0,0.866025;
+	  p position = -1.03604,0,-1.22433,0x6ab7de24;
+	}
+}
+[t:gen_bush_snow-klaw,n:0x002000dd]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "xp_werewolf";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.5,0,0.866026;
+	  p position = 0.370213,0,-0.807175,0x03d7f0b2;
+	}
+}

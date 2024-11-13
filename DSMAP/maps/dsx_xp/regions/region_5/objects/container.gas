@@ -1,0 +1,9 @@
+[t:xp_container_r5_spec,n:0x0050000e]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.92388;
+	  p position = -1.01854,5.92939,1.67021,0x42874b7c;
+		use_point_scids = 0x00500014;
+	}
+}

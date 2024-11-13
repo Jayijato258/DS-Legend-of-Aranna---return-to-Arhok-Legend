@@ -1,0 +1,640 @@
+[xp_intro_0]
+{
+	[text*]
+	{
+		sample = s_v_xp_intro;
+		screen_text = " ";
+		f scroll_rate = 20.00;
+	}
+}
+[xp_intro_1]
+{
+	[text*]
+	{
+		screen_text = "With the passing of the Shadowjumper, the Hero of Arhok returned, and peace descended upon the town.";
+		f scroll_rate = 3.75;
+	}
+}
+[xp_intro_2]
+{
+	[text*]
+	{
+		screen_text = "But the Staff of Stars was judged too powerful to remain in the land, and too dangerous to destroy.";
+		f scroll_rate = 3.75;
+	}
+}
+[xp_intro_3]
+{
+	[text*]
+	{
+		screen_text = "In a final selfless act, the Hero of Arhok agreed to be frozen - along with the Staff - into a Great Statue to watch over the town should trouble ever return.";
+		f scroll_rate = 3.75;
+	}
+}
+[xp_intro_4]
+{
+	[text*]
+	{
+		screen_text = "Now foul creatures have returned to ravage the lands outside Arhok. Though a few brave souls have journeyed beyond the town's gates, none have returned.";
+		f scroll_rate = 3.75;
+	}
+}
+[xp_intro_5]
+{
+	[text*]
+	{
+		screen_text = "The time has come for the Protector of Arhok to awaken.";
+		f scroll_rate = 3.75;
+	}
+}		
+[moht_0]
+{
+	[text*]
+	{
+	  i order = 0;
+		sample = s_v_xp_moht_0;
+		screen_text = "Welcome, hero! We have need of you again. Attacks on our town in the dark of night have killed several townspeople, and now our beloved Mayor, Hardison Dohn, has gone missing. No one is sure what is happening. Rowan has taken over the mayoral duties for now. I suspect you are our best hope for defense.\n\nThe spell that held you in stasis destroyed the Staff of Stars, and even drained some of your life force. I hope you will train before you leave town.\n\nI have saved some money and resurrection scrolls to give to you. It's not much, but perhaps it will help you.";
+	  f scroll_rate = 10.0000;
+	}
+	[text*]
+	{
+		sample = s_v_xp_moht_0_revisit;
+		screen_text = "You should go speak to Rowan. He will tell you of our plight.";
+	  f scroll_rate = 20.0;
+	}
+}
+[moht_1]
+{
+	[text*]
+	{
+		sample = s_v_xp_moht_1;
+		screen_text = "Off on another adventure? The woods are crawling with evil creatures these days. Be sure to talk to Kiira at the mage's guild before you leave town.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[moht_1_money]
+{
+	[text*]
+	{
+		sample = s_v_xp_moht_1_money;
+		screen_text = "Off on another adventure? The woods are crawling with evil creatures these days. Be sure to talk to Kiira at the mage's guild before you leave town.\n\nI have saved some money and resurrection scrolls to give to you. It's not much, but perhaps it will help you.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[moht_2]
+{
+	[text*]
+	{
+		sample = s_v_xp_moht_2;
+		screen_text = "I know everyone thinks it's the Hassat that are attacking, but I never thought they were that bad.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[moht_2_money]
+{
+	[text*]
+	{
+		sample = s_v_xp_moht_2_money;
+		screen_text = "I know everyone thinks it's the Hassat that are attacking, but I never thought they were that bad. \n\nI have saved some money and resurrection scrolls to give to you. It's not much, but perhaps it will help you.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[moht_finish]
+{
+	[text*]
+	{
+		sample = s_v_xp_moht_finish;
+		screen_text = "Well done! Another surpassing good adventure, I'd say!";
+	  f scroll_rate = 20.000000;
+	}
+}
+[guard1_0]
+{
+	[text*]
+	{
+		screen_text = "These gates are locked, my friend. Several have left without returning. Each night we are beset by beasts. No one has seen them; they may lurk outside even now!";
+	  f scroll_rate = 20.000000;
+	}
+}
+[guard1_2]
+{
+	[text*]
+	{
+		screen_text = "You look like you can handle yourself. Good luck out there.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[guard1_finish]
+{
+	[text*]
+	{
+		screen_text = "You showed them Zaurask a thing or two!";
+	  f scroll_rate = 20.000000;
+	}
+}
+[guard2]
+{
+	[text*]
+	{
+	  i order = 0;
+		screen_text = "I don't think you should go this way... the problems seem to be coming from the North.";
+	  f scroll_rate = 20.000000;
+	}
+	[text*]
+	{
+		screen_text = "Just doing my job. I won't open the gate. You can stop trying.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[guard2_finish]
+{
+	[text*]
+	{
+		screen_text = "I know everyone says you rescued us and all, but I still won't open this gate.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[guard3]
+{
+	[text*]
+	{
+	  i order = 0;
+		screen_text = "Rowan has ordered this path closed. Our troubles are not beyond here. I warrant you will find plenty of action elsewhere.";
+	  f scroll_rate = 20.000000;
+	}
+	[text*]
+	{
+		screen_text = "This isn't the way you want to go.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[rowan_1]
+{
+	[text*]
+	{
+		order = 0;
+		sample = s_v_xp_rowan_1;
+		screen_text = "So, you are the famous hero of Arhok? You don't look so impressive to me. Still, the townspeople have faith in you, and you saved them once before. Kiira tells me the stasis spell has reduced your skills; she has scrolls to help you.\n\nThe town is under attack, and I know it is those vile Hassat. My predecessor, Hardison, did little to bolster the town's defenses, and now we are nearly helpless against these ferocious scavengers. We have no idea why they are attacking us, but they must be stopped before they destroy the town.";
+	  	f scroll_rate = 20.000000;
+	  	quest_dialog = true;
+	  	activate_quest*	= xp_king,1;
+	}
+	[text*]
+	{
+		sample = s_v_xp_rowan_1_revisit;
+		screen_text = "Before you leave town, be sure to talk to Kiira.";
+		f scroll_rate = 20.0;
+	}
+}
+[rowan_2]
+{
+	[text*]
+	{
+		order = 0;
+		sample = s_v_xp_rowan_2;
+		screen_text = "Kiira seems to have helped you. Take the North gate out of town. That's where those mangy cats are coming from.";
+	  	f scroll_rate = 20.0;
+	}
+	[text*]
+	{
+		sample = s_v_xp_rowan_2_revisit;
+		screen_text = "The North gate is the way to go... that's where the Hassat seem to be coming from.";
+	  	f scroll_rate = 20.0;
+	}
+}
+[lharnob_0]
+{
+	[text*]
+	{
+		choice = shop;
+		sample = s_v_a1_lharnob_06;
+		screen_text = "Thank the heavens that the world has heroes such as you. So tell me—what will your next adventure be?";
+	  f scroll_rate = 20.0;
+	}
+}
+[kiira_0]
+{
+	[text*]
+	{
+		sample = s_v_xp_kiira_0;
+		screen_text = "I have a gift for you, but Rowan insists that you speak to him first.";
+	  	f scroll_rate = 20.0;
+	}
+}
+[kiira_1]
+{
+	[text*]
+	{
+		order = 0;
+		sample = s_v_xp_kiira_1;
+		screen_text = "I know you sacrificed the Staff of Stars for the greater good of Ehb, and I'm grateful. Having some skill in the arts, I have prepared four scrolls to aid you. Each will grant you knowledge and skill in the discipline of your choosing. Choose the skill you wish aid in carefully, for I have only enough mana to imbue a single scroll. ";
+	  	f scroll_rate = 20.0;
+	}
+	[text*]
+	{	
+		sample = s_v_xp_kiira_1_revisit;
+		screen_text = "You may choose any one of these scrolls. Choose wisely!";
+		f scroll_rate = 20.0;
+	}
+}
+[kiira_1_shop]
+{
+	[text*]
+	{
+		choice = shop;
+		sample = s_v_xp_kiira_1_shop;
+		screen_text = "Have you any need of spells or potions?";
+	  	f scroll_rate = 20.0;
+	}
+}
+[kiira_finish]
+{
+	[text*]
+	{
+		choice = shop;
+		sample = s_v_xp_kiira_finish;
+		screen_text = "Once again, you have saved us.";
+	  	f scroll_rate = 20.0;
+	}
+}
+[raab_0]
+{
+	[text*]
+	{
+		screen_text = "An honest man can't even make a living any more. why, my mules all ran off after those beasts attacked the town last time. I never even saw what happened.";
+	  f scroll_rate = 20.0;
+	}
+}
+[raab_finish]
+{
+	[text*]
+	{
+		screen_text = "I still don't trust the Hassat, because my mules don't trust them.";
+	  f scroll_rate = 20.0;
+	}
+}
+[phelan_0]
+{
+	[text*]
+	{
+	  i order = 0;
+		screen_text = "These things were working a minute ago, I swear they were. If I could just get a single quiet minute to decipher these runes...";
+	  f scroll_rate = 20.0;
+	}
+	[text*]
+	{
+	  i order = 1;
+		screen_text = "I should be in my lab.";
+	  f scroll_rate = 20.0;
+	}
+	[text*]
+	{
+		screen_text = "What is it now?";
+	  f scroll_rate = 20.0;
+	}
+}
+[bheele_0]
+{
+	[text*]
+	{
+		sample = s_v_a1_bheele_03;
+		screen_text = "Ah! The returning hero!";
+	  f scroll_rate = 20.0;
+	}
+}
+[francesca_0]
+{
+	[text*]
+	{
+	  i order = 0;
+		screen_text = "I never did trust that Rowan. He took charge too suddenly after Hardison vanished. Still, if he asked Moht to wake you, he can't be all bad.";
+	  f scroll_rate = 20.0;
+	}
+	[text*]
+	{
+		screen_text = "Be careful. As my Mum used to say: 'You cant judge a sword by its sheath.'";
+	  f scroll_rate = 20.0;
+	}
+}
+[raschel_0]
+{
+	[text*]
+	{
+		sample = s_v_a1_raschel_03;
+		screen_text = "The world is a better place with those like you in it. Thank you.";
+	  f scroll_rate = 20.0;
+	}
+}
+[saul_0]
+{
+	[text*]
+	{
+		sample = s_v_xp_saul_0;
+		screen_text = "I would travel with you, but you don't appear ready. Speak to Kiira.";
+	  	f scroll_rate = 20.000000;
+	}
+}
+[saul_intro]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_xp_saul_intro;
+		screen_text = "I know that you have sacrificed your skills and life for this town, with little enough thanks.  I, for one, want to help, but I have some debts I must resolve before I can in good conscience leave this town. Help me take care of them, and I will be your loyal companion.";
+	  	f scroll_rate = 20.000000;
+	}
+}
+[saul_hire]
+{
+	[text*]
+	{
+		sample = s_v_xp_saul_hire;
+		screen_text = "Thank you, kind sir. I am at your service.";
+	  f scroll_rate = 20.0;
+	}
+}
+[saul_no_money]
+{
+	[text*]
+	{
+		sample = s_v_xp_saul_no_money;
+		screen_text = "I'm sorry, I can't join you before taking care of my debts.";
+	  f scroll_rate = 20.0;
+	}
+}
+[saul_no_hire]
+{
+	[text*]
+	{
+		sample = s_v_xp_saul_no_hire;
+		screen_text = "As you wish. I will wait here in case you change your mind.";
+	  f scroll_rate = 20.0;
+	}
+}
+[saul_dismiss]
+{
+	[text*]
+	{
+		sample = s_v_xp_saul_dismiss;
+		screen_text = "As you wish. I will wait here in case you change your mind.";
+	  f scroll_rate = 20.0;
+	}
+}
+[saul_rehire]
+{
+	[text*]
+	{
+		sample = s_v_xp_saul_rehire;
+		choice = potential_member;
+		screen_text = "A change of heart? Excellent. I will be a first rate adventurer.";
+	  f scroll_rate = 20.0;
+	}
+}
+[erin_0]
+{
+	[text*]
+	{
+		sample = s_v_xp_erin_0;
+		screen_text = "I'd love to get out of this town, and I'm handy with a bow, but you don't look like you can handle yourself out there.";
+	  f scroll_rate = 20.0;
+	}
+}
+[erin_intro]
+{
+	[text*]
+	{
+		sample = s_v_xp_erin_intro;
+		choice = potential_member;
+		screen_text = "Nothing ever happens in this town. I wish I had a grand adventure to go on. I'll go with you for a price.";
+	  f scroll_rate = 20.0;
+	}
+}
+[erin_hire]
+{
+	[text*]
+	{
+		sample = s_v_xp_erin_hire;
+		screen_text = "Great! Thanks for the gold. Now let's get going.";
+	  f scroll_rate = 20.0;
+	}
+}
+[erin_no_hire]
+{
+	[text*]
+	{
+		sample = s_v_xp_erin_no_hire;
+		screen_text = "Whatever. I'm still bored, and you're still rich.";
+	  f scroll_rate = 20.0;
+	}
+}
+[erin_no_money]
+{
+	[text*]
+	{
+		sample = s_v_xp_erin_no_money;
+		screen_text = "Too bad you don't have enough money. I'll try to hide my disappointment.";
+	  f scroll_rate = 20.0;
+	}
+}
+[erin_dismiss]
+{
+	[text*]
+	{
+		sample = s_v_xp_erin_dismiss;
+		screen_text = "Oh, man! Just when I was starting to have a good time!";
+	  f scroll_rate = 20.0;
+	}
+}
+[erin_rehire]
+{
+	[text*]
+	{
+		sample = s_v_xp_erin_rehire;
+		choice = potential_member;
+		screen_text = "Good thinking. You probably can't make it without me.";
+	  f scroll_rate = 20.0;
+	}
+}
+[kron_0]
+{
+	[text*]
+	{
+		sample = s_v_xp_kron_0;
+		screen_text = "I remember you! Kiira told me she was going to make some scrolls for you.";
+	  f scroll_rate = 20.0;
+	}
+}
+[kron_intro]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_xp_kron_intro;
+		screen_text = "You helped me out a while back, and I haven't forgotten. I've been studying. Enough trapping for me, I said. If that young one can go off on a grand adventure, I reckon I can too. I'd join you too, but who will send money to my poor invalid parents in Smithee? I have to think of them, you know.";
+	  f scroll_rate = 20.0;
+	}
+}
+[kron_hire]
+{
+	[text*]
+	{
+		sample = s_v_xp_kron_hire;
+		screen_text = "Excellent. I can do more than trap critters now. I can fry 'em!";
+	  f scroll_rate = 20.0;
+	}
+}
+[kron_no_hire]
+{
+	[text*]
+	{
+		sample = s_v_xp_kron_no_hire;
+		screen_text = "Fine then, no skin off my nose. I'll just join the next group of adventurers that comes by.";
+	  f scroll_rate = 20.0;
+	}
+}
+[kron_no_money]
+{
+	[text*]
+	{
+		sample = s_v_xp_kron_no_money;
+		screen_text = "I have to make sure my parents are taken care of. Come back when you have more gold.";
+	  f scroll_rate = 20.0;
+	}
+}
+[kron_dismiss]
+{
+	[text*]
+	{
+		sample = s_v_xp_kron_dismiss;
+		screen_text = "I wanted to go back and sit in my shack anyway.";
+	  f scroll_rate = 20.0;
+	}
+}
+[kron_rehire]
+{
+	[text*]
+	{
+		sample = s_v_xp_kron_rehire;
+		choice = potential_member;
+		screen_text = "I'll help, but why don't you make up your mind?";
+	  f scroll_rate = 20.000000;
+	}
+}
+[kron_rejected]
+{
+	[text*]
+	{
+		sample = s_v_xp_kron_rejected;
+		screen_text = "Bah! Who needs you! I can take care of myself.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[kron_game_complete]
+{
+	[text*]
+	{
+		sample = s_v_a1_kron_07;
+		screen_text = "Much obliged for all your help!";
+	  f scroll_rate = 20.0;
+	}
+}
+[syrd_0]
+{
+	[text*]
+	{
+		sample = s_v_a1_syrd_06;
+		screen_text = "Too long was my mind clouded by the evil of the island... Thank you, my friend! Thank you... your parents would be proud. Your courage and bravery mark you as a true hero.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[reynard_0]
+{
+	[text*]
+	{
+		sample = s_v_a1_reynard_09;
+		screen_text = "There's a storm moving in now; there's dark clouds to the west.";
+	  f scroll_rate = 20.0;
+	}
+}
+[reynard_2]
+{
+	[text*]
+	{
+		sample = s_v_a1_reynard_07;
+		screen_text = "Your mission is a grave and dangerous one... my thoughts are with you.";
+	  f scroll_rate = 20.0;
+	}
+}
+[reynard_finish]
+{
+	[text*]
+	{
+		screen_text = "You have acquitted yourself admirably.";
+	  f scroll_rate = 20.0;
+	}
+}
+[boris_0]
+{
+	[text*]
+	{
+		sample = s_v_xp_boris_0;
+		screen_text = "My father says never to go on adventures with people who aren't experienced.";
+	  f scroll_rate = 20.0;
+	}
+}
+[boris_intro]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_xp_boris_intro;
+		screen_text = "I'm a good fighter! My dad says I can smash anything! You'll see! Can I come with you? There's just this little matter of my bar tab.";
+	  f scroll_rate = 20.0;
+	}
+}
+[boris_hire]
+{
+	[text*]
+	{
+		sample = s_v_xp_boris_hire;
+		screen_text = "Yes, I'm a really good fighter. You'll see.";
+	  f scroll_rate = 20.0;
+	}
+}
+[boris_no_hire]
+{
+	[text*]
+	{
+		sample = s_v_xp_boris_no_hire;
+		screen_text = "That makes Boris sad.";
+	  f scroll_rate = 20.0;
+	}
+}
+[boris_no_money]
+{
+	[text*]
+	{
+		sample = s_v_xp_boris_no_money;
+		screen_text = "That tavern keeper is really mean! If I don't pay my bill, he won't let me leave.";
+	  f scroll_rate = 20.0;
+	}
+}
+[boris_dismiss]
+{
+	[text*]
+	{
+		sample = s_v_xp_boris_dismiss;
+		screen_text = "That makes Boris sad. Will you come back someday?";
+	  f scroll_rate = 20.0;
+	}
+}
+[boris_rehire]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_xp_boris_rehire;
+		screen_text = "I'm ready to hurt things for you. Just tell me which ones.";
+	  f scroll_rate = 20.0;
+	}
+}

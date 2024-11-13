@@ -1,0 +1,44 @@
+[t:emt_sound_act,n:0x004003ab]
+{
+	[placement]
+	{
+	  q orientation = 0,2.74658e-007,0,1;
+	  p position = -1.51128,0.5,4.46008,0x796456ba;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "xp_raks1";
+	  b is_global = true;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x004003cf]
+{
+	[placement]
+	{
+	  q orientation = 0,3.66211e-007,0,1;
+	  p position = 1.96546,-1.5,-0.926518,0x3e7d2010;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "xp_raks3";
+	  b is_global = true;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x004003bf]
+{
+	[placement]
+	{
+	  p position = -2.4645,0,1.34394,0xe483e0f2;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "xp_raks2";
+	  b is_global = true;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}

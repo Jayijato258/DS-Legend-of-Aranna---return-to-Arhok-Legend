@@ -1,0 +1,124 @@
+[t:xp_combatm_exp_item,n:0x00100133]
+{
+	[aspect]
+	{
+	  b is_visible = false;
+	}
+	[placement]
+	{
+	  p position = 1.12951,-1.5,-0.448082,0x251f9f82;
+	}
+}
+[t:xp_melee_exp_item,n:0x00100205]
+{
+	[aspect]
+	{
+	  b is_visible = false;
+	}
+	[placement]
+	{
+	  p position = 0.696341,-1.5,-0.653179,0x251f9f82;
+	}
+}
+[t:xp_naturem_exp_item,n:0x00100228]
+{
+	[aspect]
+	{
+	  b is_visible = false;
+	}
+	[placement]
+	{
+	  p position = -0.00305367,-1.5,-0.588808,0x251f9f82;
+	}
+}
+[t:xp_ranged_exp_item,n:0x0010022c]
+{
+	[aspect]
+	{
+	  b is_visible = false;
+	}
+	[placement]
+	{
+	  p position = -0.714479,-1.5,-0.558403,0x251f9f82;
+	}
+}
+[t:mc_g_c_m_1h_avg,n:0x00100443]
+{
+	[aspect]
+	{
+	  b draw_selection_indicator = false;
+	  b is_selectable = false;
+	  b rollover_highlight = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.300706,0,0.953717;
+	  p position = -0.85321,-4.76837e-007,-1.59997,0x5b2ba43f;
+	}
+}
+[t:sh_w_g_c_r_m_avg,n:0x00100441]
+{
+	[aspect]
+	{
+	  b draw_selection_indicator = false;
+	  b is_selectable = false;
+	  b rollover_highlight = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 3.79868,-0.3,1.61974,0x143e89ee;
+	}
+}
+[t:ss_g_c_bl_1h_avg,n:0x00100432]
+{
+	[aspect]
+	{
+	  b draw_selection_indicator = false;
+	  b is_selectable = false;
+	  b rollover_highlight = false;
+	}
+	[placement]
+	{
+	  p position = -3.798,5.36442e-007,-1.98163,0x3d2b374d;
+	}
+}
+[t:cb_g_c_r_1h_avg,n:0x0010043b]
+{
+	[aspect]
+	{
+	  b draw_selection_indicator = false;
+	  b is_selectable = false;
+	  b rollover_highlight = false;
+	}
+	[placement]
+	{
+	  p position = 1.31333,-0.3,-3.83005,0xd1f86798;
+	}
+}
+[t:sh_w_g_c_r_s_avg,n:0x0010043d]
+{
+	[aspect]
+	{
+	  b draw_selection_indicator = false;
+	  b is_selectable = false;
+	  b rollover_highlight = false;
+	}
+	[placement]
+	{
+	  p position = 1.51193,-0.0354097,-2.28097,0xd1f86798;
+	}
+}
+[t:pitchfork,n:0x00100130]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+		megamap_icon = <none>;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -1.62605,-1.25,-2.26064,0x12cc0ed5;
+	}
+}

@@ -1,0 +1,105 @@
+[t:cmd_auto_save,n:0x00300260]
+{
+	[placement]
+	{
+	  p position = 4.5277,-1.4,10.1469,0x5e684c1a;
+	}
+}
+[t:light_flicker,n:0x0030016a]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.2;
+	  x siege_light = 0xF4492321;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.743145,0,0.669131;
+	  p position = 1.27865,2.79123,-0.100632,0xb289fed0;
+	}
+}
+[t:light_enable,n:0x00300191]
+{
+	[common]
+	{
+		dev_instance_text = "SWITCH FOR DP LIGHTS";
+	}
+	[light_enable]
+	{
+	  f fizzle_duration = 2;
+	  b initially_active = false;
+	  x siege_light = 0xE946D089;
+	  b use_fizzle = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 3.70515,0.62,-3.10143,0xf57945ba;
+	}
+}
+[t:light_enable,n:0x00300192]
+{
+	[common]
+	{
+		dev_instance_text = "SWITCH FOR DP LIGHTS";
+	}
+	[light_enable]
+	{
+	  f fizzle_duration = 2;
+	  b initially_active = false;
+	  x siege_light = 0x9C857216;
+	  b use_fizzle = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 3.70515,0.62,2.97519,0xf57945ba;
+	}
+}
+[t:light_enable,n:0x00300193]
+{
+	[common]
+	{
+		dev_instance_text = "SWITCH FOR DP LIGHTS";
+	}
+	[light_enable]
+	{
+	  f fizzle_duration = 2;
+	  b initially_active = false;
+	  x siege_light = 0x439E954F;
+	  b use_fizzle = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -3.62839,0.62,-3.10143,0xf57945ba;
+	}
+}
+[t:light_enable,n:0x00300194]
+{
+	[common]
+	{
+		dev_instance_text = "SWITCH FOR DP LIGHTS";
+	}
+	[light_enable]
+	{
+	  f fizzle_duration = 2;
+	  b initially_active = false;
+	  x siege_light = 0x175B9D91;
+	  b use_fizzle = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -3.62839,0.62,2.97519,0xf57945ba;
+	}
+}
+[t:cmd_auto_save,n:0x003001aa]
+{
+	[placement]
+	{
+	  p position = -1.16165,5.25,-15.5972,0xd69519d9;
+	}
+}

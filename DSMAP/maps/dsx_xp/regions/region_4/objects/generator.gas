@@ -1,0 +1,32 @@
+[t:gen_grate_floor-spider_adolescent_yellow,n:0x00400299]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "xp_spider_emerald";
+	  i max_alive_children = 10;
+	  i num_children_incubating = 10;
+	  f spawn_period = 0.3;
+	  f trigger_range = 5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.01752,-2.03559,0.00410452,0xf571697f;
+	}
+}
+[t:gen_grate_floor-spider_adolescent_yellow,n:0x00400278]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "xp_spider_emerald";
+	  i max_alive_children = 7;
+	  i num_children_incubating = 7;
+	  f spawn_period = 0.3;
+	  f trigger_range = 5;
+	}
+	[placement]
+	{
+	  q orientation = -1.78814e-007,0.707108,-3.27826e-007,-0.707107;
+	  p position = -1.02864,-2.07136,-0.011459,0xdf4b8644;
+	}
+}

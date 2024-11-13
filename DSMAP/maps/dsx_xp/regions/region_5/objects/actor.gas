@@ -1,0 +1,85 @@
+[t:xp_salamander_red,n:0x00500027]
+{
+	[placement]
+	{
+	  q orientation = 0,0.866025,0,-0.5;
+	  p position = 0.678952,-20,-1.16212,0x76c2b77c;
+	}
+}
+[t:xp_salamander_blue,n:0x00500026]
+{
+	[placement]
+	{
+	  q orientation = 0,0.258819,0,0.965926;
+	  p position = 2.63727,-6.5,-3.33093,0xdc3bba4c;
+	}
+}
+[t:xp_hassat_king,n:0x0050001a]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.02976;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = king_5;
+			* = king_6;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.999962,0,0.00872615;
+	  p position = 4.10792,-3.93405,1.13699,0x64449485;
+	}
+}
+[t:narrator,n:0x00500062]
+{
+	[common]
+	{
+		dev_instance_text = "NARRATOR";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = outro_1;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = 1.8188,0,-0.694778,0xbc9a8880;
+	}
+}
+[t:xp_raks,n:0x00500016]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00500017,0f,"default","every",0), doc("open door");
+				action* = send_world_message("we_trigger_activate",0x00500051,0f,"default","every",0), doc("activate nis trigger");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707106,0,0.707108;
+	  p position = -1.25039,9.53674e-006,1.52479,0xb5abb1da;
+	}
+}

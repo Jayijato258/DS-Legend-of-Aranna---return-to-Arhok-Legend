@@ -1,0 +1,11 @@
+[rowan_4]
+{
+	[text*]
+	{
+		quest_dialog = true;
+ 		sample = s_v_xp_rowan_4;
+		screen_text = "Impressive. I didn't think you would get this far. You humans always seem to carry on longer than you should. When Raks awoke, he summoned me. The filthy Hassat kept our kind trapped in this fetid place, and Raks offered us a way out. We captured the Hassat King together, trapped him in Raks' lair below, and then Raks led the Zaurask Zombies against the Hassat. Without their King they were easy prey.\n\nNow we have our sights set on the human town, and we aren't going to let you stop us. Watch now, and prepare for your doom!";
+	  	f scroll_rate = 20.0000;
+	  	activate_quest*	= xp_king,4;
+	}
+}

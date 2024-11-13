@@ -1,0 +1,135 @@
+[t:xp_hassat_fighter,n:0x002000b4]
+{
+	[placement]
+	{
+	  q orientation = 0,0.999048,0,0.0436193;
+	  p position = 1.70115,6,2.45013,0x1cc2674c;
+	}
+}
+[t:xp_hassat_fighter,n:0x002000d8]
+{
+	[placement]
+	{
+	  q orientation = 0,1.49012e-008,0,1;
+	  p position = 1.75784,0,-0.358591,0xecbd81d3;
+	}
+}
+[t:xp_rune_guardian,n:0x002000e6]
+{
+	[mind]
+	{
+	  x initial_command = 0x002000ED;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.43249,0,-0.173187,0xd4937cb1;
+	}
+}
+[t:xp_rune_guardian,n:0x002000e7]
+{
+	[mind]
+	{
+	  x initial_command = 0x002000EA;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.17041,0,1.54001,0xd4937cb1;
+	}
+}
+[t:xp_werewolf,n:0x002000fe]
+{
+	[placement]
+	{
+	  q orientation = 0,0.5,0,0.866026;
+	  p position = 2.32293,0,-3.77361,0x51491d7e;
+	}
+}
+[t:xp_rune_guardian,n:0x002000e8]
+{
+	[mind]
+	{
+	  x initial_command = 0x002000EF;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.08677,0,-0.53727,0x0657e109;
+	}
+}
+[t:xp_rune_guardian,n:0x002000e9]
+{
+	[mind]
+	{
+	  x initial_command = 0x002000EE;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.566315,0,1.06926,0x0657e109;
+	}
+}
+[t:xp_hassat_protector,n:0x002000d9]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.67987,0,-0.534582,0xcdba0878;
+	}
+}
+[t:xp_hassat_lt,n:0x002000ae]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hassat_3;
+			* = hassat_finish;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.49294,0,0.678737,0x551eddc0;
+	}
+}
+[t:xp_hassat_fighter,n:0x002000da]
+{
+	[placement]
+	{
+	  q orientation = 0,0.737277,0,0.67559;
+	  p position = -1.84508,0,-0.744164,0x551eddc0;
+	}
+}
+[t:xp_werewolf,n:0x002000fd]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -3.52113,0,0.957664,0xef186331;
+	}
+}
+[t:xp_werewolf,n:0x002000ff]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.5,0,0.866026;
+	  p position = -2.51503,0,-1.45409,0xef186331;
+	}
+}
+[t:xp_rune_guardian,n:0x00200085]
+{
+	[placement]
+	{
+	  q orientation = 0,0.0436195,0,0.999048;
+	  p position = -1.90869,0,0.0651016,0xd7c5b8e1;
+	}
+}
+[t:xp_rune_guardian,n:0x00200090]
+{
+	[placement]
+	{
+	  p position = 2.036,0,-0.104836,0xd7c5b8e1;
+	}
+}

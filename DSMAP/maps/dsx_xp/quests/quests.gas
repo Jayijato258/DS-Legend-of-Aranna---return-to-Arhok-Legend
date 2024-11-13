@@ -1,0 +1,84 @@
+//////////////////////////////
+//	 DSX_XP QUESTS FILE	//
+//////////////////////////////
+
+//////////////
+// CHAPTERS //
+//////////////
+
+// no chapters
+
+////////////
+// QUESTS //
+////////////
+
+[quests]
+{
+	[xp_king]
+	{
+		chapter		= ;
+		screen_name 	= "Save the Town";
+		victory_sample 	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_hassatking;
+	
+		[*]
+		{
+			order		= 0;
+			speaker		= ;
+			description	= "Speak to Rowan.";
+			sample		= ;
+			address		= ;
+		//  we may want to not play update sound if during opening NIS we hear the victory sample...
+		//	play_update_sound = false;
+		}
+		[*]
+		{
+			order		= 1;
+			speaker		= "Rowan";
+			description	= "Speak to Kiira at the Mage's Guild for training";
+			sample		= ;
+			address		= region_1:conversations:rowan_1;
+		}
+		[*]
+		{
+			order		= 2;
+			speaker		= ;
+			description	= "Discover the source of the Hassat Threat";
+			sample		= ;
+			address		= ;
+		}
+		[*]
+		{
+			order		= 3;
+			speaker		= "Hassat Lieutenant";
+			description	= "Find the Hassat King";
+			sample		= ;
+			address		= region_2:conversations:hassat_3;
+		}
+		[*]
+		{
+			order		= 4;
+			speaker		= "Rowan the Doppelganger";
+			description	= "Rescue the Hassat King";
+			sample		= ;
+			address		= region_4:conversations:rowan_4;
+		}
+		[*]
+		{
+			order		= 5;
+			speaker		= ;
+			description	= "Rescue the Hassat King";
+			sample		= ;
+			address		= ;
+		}
+		[*]
+		{
+			order		= 6;
+			speaker		= "Hassat King";
+			description	= "You have saved the town!";
+			sample		= ;
+			address		= region_5:conversations:king_5;
+		}
+	
+	}
+}

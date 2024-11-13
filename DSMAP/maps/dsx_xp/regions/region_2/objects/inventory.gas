@@ -1,0 +1,14 @@
+[t:sd_g_c_bl_1h_avg,n:0x0020013c]
+{
+	[aspect]
+	{
+	  b draw_selection_indicator = false;
+	  b is_selectable = false;
+	  b rollover_highlight = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.793353,0,0.608762;
+	  p position = -1.57963,-5.94162,-3.97198,0x5a5ba578;
+	}
+}

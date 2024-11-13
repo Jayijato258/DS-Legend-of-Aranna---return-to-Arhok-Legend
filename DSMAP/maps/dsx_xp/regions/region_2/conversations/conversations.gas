@@ -1,0 +1,27 @@
+[hassat_3]
+{
+	[text*]
+	{
+		order = 0;
+		sample = s_v_xp_hassat_3;
+		screen_text = "Humans, although you come with weapons drawn, I tell you it is not our brothers that have attacked your town. Our enmity for the humans is ancient, but now we have a more pressing concern. Our lands have been wrenched from us by the scaly ones. New lizard creatures attack, and are fiercer and braver than before.\n\nWe are forced from our home, and many of us would fight. Our King has been taken from us by the leader of the Zaurask. If you can find him, perhaps you can persuade us not to take over your town as our new home.\n\nAs a token of our good will, Tareece will join you on your search.";
+		quest_dialog = true;
+		activate_quest*	= xp_king,3;
+	  	f scroll_rate = 10.0000;
+	}
+	[text*]
+	{
+		sample = s_v_xp_hassat_3_revisit;
+		screen_text = "We will suffer your kind for a short time only. Save our King, or you will be sorry.";
+		f scroll_rate = 20.0;
+	}
+}
+[hassat_finish]
+{
+	[text*]
+	{
+		sample = s_v_xp_hassat_finish;
+		screen_text = "We thank you. We shall return to our lands now. May our races exist together in peace.";
+		f scroll_rate = 20.0;
+	}
+}

@@ -1,0 +1,22 @@
+[t:book_glb_lore_xp_hardison,n:0x00300006]
+{
+	[placement]
+	{
+	  p position = 0.874472,0,0.886553,0x9cebf26e;
+	}
+}
+[t:book_glb_lore_xp_journal,n:0x00300013]
+{
+	[placement]
+	{
+	  q orientation = 0,0.5,0,0.866026;
+	  p position = -0.405563,0,0.781253,0x324e8920;
+	}
+}
+[t:sd_g_c_bl_1h_avg,n:0x00300275]
+{
+	[placement]
+	{
+	  p position = -1.85191,0,-0.490603,0x324e8920;
+	}
+}

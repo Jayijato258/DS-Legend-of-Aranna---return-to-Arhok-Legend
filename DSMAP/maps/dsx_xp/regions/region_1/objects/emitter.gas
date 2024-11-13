@@ -1,0 +1,648 @@
+[t:emt_generic_act,n:0x001003c8]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "xp_statue_surround";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.923879;
+	  p position = 0.776765,0,0.555862,0xc6b0f420;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x001000fc]
+{
+	[placement]
+	{
+	  q orientation = 0.00250891,-0.0260561,0.095813,0.995056;
+	  p position = -0.341698,4.18167,0.126892,0x2a5d7be4;
+	}
+}
+[t:emt_sound,n:0x0010022f]
+{
+	[placement]
+	{
+	  p position = -0.100533,-5.07523,-0.451691,0x2a5d7be4;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_burning_small";
+	  f max_dist = 4;
+	  f min_dist = 1;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x001003d5]
+{
+	[placement]
+	{
+	  q orientation = 0.069524,0.685186,0.0659759,0.722035;
+	  p position = 0.416245,1.95969,0.445503,0x8585704b;
+	}
+}
+[t:emt_sound,n:0x00100235]
+{
+	[placement]
+	{
+	  p position = -4.02299,-3.5,2.70604,0x4bc2a5ad;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_burning_small";
+	  f max_dist = 4;
+	  f min_dist = 1;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x001003e5]
+{
+	[placement]
+	{
+	  q orientation = 0.00250889,-0.0260562,0.0958129,0.995055;
+	  p position = -5.83551,4.4597,3.60145,0x4bc2a5ad;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x001003e6]
+{
+	[placement]
+	{
+	  q orientation = 0.00250889,-0.0260562,0.0958129,0.995055;
+	  p position = -5.45028,4.4597,3.52195,0x4bc2a5ad;
+	}
+}
+[t:emt_sound_act,n:0x0010024b]
+{
+	[placement]
+	{
+	  p position = 2.89553,-0.35,-0.128792,0x4b0c7877;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_crow_caw_solo";
+	  f min_dist = 10;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x00100324]
+{
+	[placement]
+	{
+	  q orientation = 0.00250889,-0.0260561,0.0958129,0.995055;
+	  p position = 4.28587,4.0097,4.61879,0xb49a4d27;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x001003df]
+{
+	[placement]
+	{
+	  q orientation = 0.00250889,-0.0260561,0.0958129,0.995055;
+	  p position = 4.47845,4.0097,4.68727,0xb49a4d27;
+	}
+}
+[t:emt_sound_act,n:0x0010022a]
+{
+	[placement]
+	{
+	  p position = -0.213814,-1.5,-3.61501,0x251f9f82;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "s_e_env_chimes";
+	  f max_dist = 45;
+	  f min_dist = 15;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x0010021a]
+{
+	[placement]
+	{
+	  p position = 2.34653,0,0.967621,0xe635b349;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_thunder_rumble_distant";
+	  f max_dist = 45;
+	  f min_dist = 15;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound,n:0x0010022d]
+{
+	[placement]
+	{
+	  p position = -0.273956,-0.35,-0.535564,0x8ab993b1;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_crow_caw_solo";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 10;
+	}
+}
+[t:emt_particle_act,n:0x001003bd]
+{
+	[common]
+	{
+		dev_instance_text = "PARTICLE SHOOTER FOR DP USE";
+	}
+	[particle_emitter_act]
+	{
+	  f blue = 1;
+	  i count = 30;
+	  f end_radius_max = 2;
+	  f end_radius_min = 2;
+	  f fade = 0.5;
+	  f particle_size = 0.7;
+	  f red = 0.5;
+	  f start_radius_max = 1;
+	  f start_radius_min = 1;
+	  f xacc = 90;
+	  f yacc = 0;
+	  f zacc = 0;
+	  f zvel = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.999962,0,0.00872676;
+	  p position = 2.50589,2.6876,2.29766,0x92ea0a59;
+	}
+}
+[t:emt_glow_act,n:0x001003c0]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL DP ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 1;
+	  f green = 0.5;
+	  f red = 0.5;
+	  f scale = 1.1;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.39875,2.92572,-2.36019,0x92ea0a59;
+	}
+}
+[t:emt_glow_act,n:0x001003c1]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL DP ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 1;
+	  f green = 0.5;
+	  f red = 0.5;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -2.2874,2.87224,2.33997,0x92ea0a59;
+	}
+}
+[t:emt_glow_act,n:0x001003c2]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL DP ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 1;
+	  f green = 0.5;
+	  f red = 0.5;
+	  f scale = 1.1;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,-0.92388;
+	  p position = -2.31364,2.88702,-2.37841,0x92ea0a59;
+	}
+}
+[t:emt_glow_act,n:0x001003c3]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL DP ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 1;
+	  f green = 0.5;
+	  f red = 0.5;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 2.44382,2.89297,2.36928,0x92ea0a59;
+	}
+}
+[t:emt_particle_act,n:0x001003c4]
+{
+	[common]
+	{
+		dev_instance_text = "PARTICLE SHOOTER FOR DP USE";
+	}
+	[particle_emitter_act]
+	{
+	  f blue = 1;
+	  i count = 15;
+	  f end_radius_max = 2;
+	  f end_radius_min = 2;
+	  f fade = 0.5;
+	  f particle_size = 0.7;
+	  f red = 0.5;
+	  f start_radius_max = 1;
+	  f start_radius_min = 1;
+	  f yacc = 0;
+	  f zacc = 90;
+	  f zvel = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = -2.44004,2.71047,2.49944,0x92ea0a59;
+	}
+}
+[t:emt_particle_act,n:0x001003c5]
+{
+	[common]
+	{
+		dev_instance_text = "PARTICLE SHOOTER FOR DP USE";
+	}
+	[particle_emitter_act]
+	{
+	  f blue = 1;
+	  i count = 15;
+	  f end_radius_max = 2;
+	  f end_radius_min = 2;
+	  f fade = 0.5;
+	  f particle_size = 0.7;
+	  f red = 0.5;
+	  f start_radius_max = 1;
+	  f start_radius_min = 1;
+	  f yacc = 0;
+	  f zacc = 90;
+	  f zvel = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.00872681,0,0.999962;
+	  p position = -2.39126,2.82689,-2.51874,0x92ea0a59;
+	}
+}
+[t:emt_particle_act,n:0x001003c6]
+{
+	[common]
+	{
+		dev_instance_text = "PARTICLE SHOOTER FOR DP USE";
+	}
+	[particle_emitter_act]
+	{
+	  f blue = 1;
+	  i count = 15;
+	  f end_radius_max = 2;
+	  f end_radius_min = 2;
+	  f particle_size = 0.7;
+	  f red = 0.5;
+	  f start_radius_max = 1;
+	  f start_radius_min = 1;
+	  f yacc = 0;
+	  f zacc = 90;
+	  f zvel = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707106,0,0.707107;
+	  p position = 2.52295,2.79408,-2.52833,0x92ea0a59;
+	}
+}
+[t:emt_particle_act,n:0x0010039f]
+{
+	[common]
+	{
+		dev_instance_text = "PARTICLE SHOOTER FOR DP USE";
+	}
+	[particle_emitter_act]
+	{
+	  f blue = 1;
+	  i count = 30;
+	  f end_radius_max = 2;
+	  f end_radius_min = 2;
+	  f fade = 0.5;
+	  f green = 0.7;
+	  f particle_size = 0.7;
+	  f red = 0.9;
+	  f start_radius_max = 1;
+	  f start_radius_min = 1;
+	  f xacc = 90;
+	  f yacc = 0;
+	  f zacc = 0;
+	  f zvel = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.999962,0,-0.00869715;
+	  p position = 2.37769,2.71645,2.30664,0xfca7530e;
+	}
+}
+[t:emt_glow_act,n:0x001003ae]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL DP ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 1;
+	  f green = 0.7;
+	  f red = 0.9;
+	  f scale = 1.1;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.37909,2.66478,-2.34882,0xfca7530e;
+	}
+}
+[t:emt_glow_act,n:0x001003af]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL DP ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 1;
+	  f green = 0.7;
+	  f red = 0.9;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.94192,2.85965,2.18194,0xfca7530e;
+	}
+}
+[t:emt_glow_act,n:0x001003b0]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL DP ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 1;
+	  f green = 0.7;
+	  f red = 0.9;
+	  f scale = 1.1;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,-0.92388;
+	  p position = -2.27103,2.86601,-2.15335,0xfca7530e;
+	}
+}
+[t:emt_glow_act,n:0x001003b1]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL DP ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 1;
+	  f green = 0.7;
+	  f red = 0.9;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 2.38278,2.79372,2.15384,0xfca7530e;
+	}
+}
+[t:emt_particle_act,n:0x001003b2]
+{
+	[common]
+	{
+		dev_instance_text = "PARTICLE SHOOTER FOR DP USE";
+	}
+	[particle_emitter_act]
+	{
+	  f blue = 1;
+	  i count = 15;
+	  f end_radius_max = 2;
+	  f end_radius_min = 2;
+	  f fade = 0.5;
+	  f green = 0.7;
+	  f particle_size = 0.7;
+	  f red = 0.9;
+	  f start_radius_max = 1;
+	  f start_radius_min = 1;
+	  f yacc = 0;
+	  f zacc = 90;
+	  f zvel = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = -2.09239,2.76071,2.40558,0xfca7530e;
+	}
+}
+[t:emt_particle_act,n:0x001003b3]
+{
+	[common]
+	{
+		dev_instance_text = "PARTICLE SHOOTER FOR DP USE";
+	}
+	[particle_emitter_act]
+	{
+	  f blue = 1;
+	  i count = 15;
+	  f end_radius_max = 2;
+	  f end_radius_min = 2;
+	  f fade = 0.5;
+	  f green = 0.7;
+	  f particle_size = 0.7;
+	  f red = 0.9;
+	  f start_radius_max = 1;
+	  f start_radius_min = 1;
+	  f yacc = 0;
+	  f zacc = 90;
+	  f zvel = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.00872681,0,0.999962;
+	  p position = -2.25722,2.86567,-2.36271,0xfca7530e;
+	}
+}
+[t:emt_particle_act,n:0x001003b4]
+{
+	[common]
+	{
+		dev_instance_text = "PARTICLE SHOOTER FOR DP USE";
+	}
+	[particle_emitter_act]
+	{
+	  f blue = 1;
+	  i count = 15;
+	  f end_radius_max = 2;
+	  f end_radius_min = 2;
+	  f green = 0.7;
+	  f particle_size = 0.7;
+	  f red = 0.9;
+	  f start_radius_max = 1;
+	  f start_radius_min = 1;
+	  f yacc = 0;
+	  f zacc = 90;
+	  f zvel = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707106,0,0.707107;
+	  p position = 1.99615,2.58845,-2.47175,0xfca7530e;
+	}
+}
+[t:emt_sound_act,n:0x00100227]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.297401,0,3.34122,0xa7cf33da;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_hawk_cry_multiple";
+	  f min_dist = 15;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x00100234]
+{
+	[placement]
+	{
+	  p position = 3.78003,0,0.269798,0x02f48d35;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_thunder_crack";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound,n:0x0010004f]
+{
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = -1.5332,-1.90735e-006,-1.69976,0x4d2821a7;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_crow_caw_solo";
+	  f repeat_rate = 30;
+	}
+}
+[t:emt_sound,n:0x0010005a]
+{
+	[placement]
+	{
+	  p position = -1.54393,0,-0.205563,0xc2855f31;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_secret_nearby";
+	  f max_dist = 25;
+	  f min_dist = 2;
+	  f repeat_rate = 25;
+	}
+}
+[t:emt_sound_act,n:0x0010006f]
+{
+	[placement]
+	{
+	  p position = -1.55154,-1.90735e-006,1.28425,0x17d7a911;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_thunder_crack";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x00100121]
+{
+	[placement]
+	{
+	  p position = -0.534393,-1.90735e-006,1.52998,0x17d7a911;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_thunder_rumble_distant";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound,n:0x00100013]
+{
+	[placement]
+	{
+	  p position = -1.61066,0,1.76955,0x5514f7ff;
+	}
+	[sound_emitter]
+	{
+		event_sound = "wind_chimes";
+	  f repeat_rate = 25;
+	}
+}
+[t:emt_sound,n:0x0010023e]
+{
+	[placement]
+	{
+	  p position = -3.33363,0.9,1.25308,0xc122c998;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_burning_small";
+	  f max_dist = 8;
+	  f min_dist = 2;
+	}
+}
+[t:emt_sound_act,n:0x00100236]
+{
+	[placement]
+	{
+	  p position = 0.434244,-0.4,2.35825,0x85fbec04;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_wind_gust";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound,n:0x00100242]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.54629,0,0.739838,0x64e9410a;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_crow_caw_solo";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 10;
+	}
+}

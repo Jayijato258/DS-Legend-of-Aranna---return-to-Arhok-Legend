@@ -1,0 +1,58 @@
+[bookmarks]
+{
+	[t:bookmark,n:region_1]
+	{
+		description = "";
+		position = 0.000000,0.000000,0.000000,0x19a7a1ef;
+		[camera]
+		{
+		  f azimuth = 1.290797;
+		  f distance = 13.000000;
+		  f orbit = -0.050000;
+		}
+	}
+	[t:bookmark,n:region_2]
+	{
+		description = "";
+		position = 0.000000,0.000000,0.000000,0xec1efffb;
+		[camera]
+		{
+		  f azimuth = 1.470796;
+		  f distance = 40.500000;
+		  f orbit = -1.510796;
+		}
+	}
+	[t:bookmark,n:region_3]
+	{
+		description = "";
+		position = 0.000000,0.000000,0.000000,0x952e261b;
+		[camera]
+		{
+		  f azimuth = 0.980797;
+		  f distance = 20.500000;
+		  f orbit = 3.150013;
+		}
+	}
+	[t:bookmark,n:region_4]
+	{
+		description = "";
+		position = 0.000000,0.000000,0.000000,0x390772fb;
+		[camera]
+		{
+		  f azimuth = 1.470796;
+		  f distance = 18.000000;
+		  f orbit = 3.119981;
+		}
+	}
+	[t:bookmark,n:region_5]
+	{
+		description = "";
+		position = 0.000000,0.000000,0.000000,0xEB17F353;
+		[camera]
+		{
+		  f azimuth = 1.300797;
+		  f distance = 13.000000;
+		  f orbit = 1.589999;
+		}
+	}
+}

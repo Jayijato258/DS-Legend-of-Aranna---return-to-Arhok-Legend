@@ -1,0 +1,274 @@
+[t:cmd_region_message,n:0x00500045]
+{
+	[placement]
+	{
+	  p position = 1.79351,0,1.59273,0x60ed2029;
+	}
+	[screen_report]
+	{
+		description = "'You have discovered me and my designs. Are you ready to die?'";
+	  b prepend_name = false;
+	}
+}
+[t:screen_fade,n:0x00500015]
+{
+	[common]
+	{
+		dev_instance_text = "FADE OUT (1)";
+	}
+	[placement]
+	{
+	  p position = -3.22486,-1.90735e-006,-2.45808,0xb905e731;
+	}
+	[screen_fade]
+	{
+	  f duration = 1;
+	  b fade = false;
+	}
+}
+[t:screen_fade,n:0x00500028]
+{
+	[common]
+	{
+		dev_instance_text = "FADE IN (2)";
+	}
+	[placement]
+	{
+	  p position = -1.87413,0,-2.43354,0xb905e731;
+	}
+	[screen_fade]
+	{
+	  f duration = 1;
+	}
+}
+[t:screen_fade,n:0x0050002d]
+{
+	[common]
+	{
+		dev_instance_text = "FADE OUT (3)";
+	}
+	[placement]
+	{
+	  p position = -0.432219,0,-2.32063,0xb905e731;
+	}
+	[screen_fade]
+	{
+	  f duration = 1;
+	  b fade = false;
+	}
+}
+[t:screen_fade,n:0x0050002e]
+{
+	[common]
+	{
+		dev_instance_text = "FADE IN (4)";
+	}
+	[placement]
+	{
+	  p position = 0.533646,0,-2.30071,0xb905e731;
+	}
+	[screen_fade]
+	{
+	  f duration = 1;
+	}
+}
+[t:screen_fade,n:0x0050002f]
+{
+	[common]
+	{
+		dev_instance_text = "FADE OUT (5)";
+	}
+	[placement]
+	{
+	  p position = 1.6568,0,-2.34777,0xb905e731;
+	}
+	[screen_fade]
+	{
+	  f duration = 1;
+	  b fade = false;
+	}
+}
+[t:screen_fade,n:0x00500034]
+{
+	[common]
+	{
+		dev_instance_text = "FADE IN (6)";
+	}
+	[placement]
+	{
+	  p position = 2.90685,0,-2.33419,0xb905e731;
+	}
+	[screen_fade]
+	{
+	  f duration = 2;
+	}
+}
+[t:dsx_cmd_party_wrangler,n:0x00500037]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.0511665,0,-3.63147,0xb905e731;
+	}
+}
+[t:cmd_enter_nis,n:0x00500052]
+{
+	[cmd_enter_nis]
+	{
+	  x next_scid = 0x0050004C;
+	  f widescreen_delay = 0;
+	}
+	[common]
+	{
+		dev_instance_text = "START NIS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00500037,0f,"default","every",0), doc("activate party wrangler");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.25708,-7.62939e-006,-3.60176,0xb905e731;
+	}
+}
+[t:cmd_leave_nis,n:0x00500053]
+{
+	[cmd_leave_nis]
+	{
+	  f duration = 0;
+	}
+	[common]
+	{
+		dev_instance_text = "END NIS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00500036,0f,"default","every",0), doc("update quest");
+				action* = send_world_message("we_req_deactivate",0x00500037,0f,"default","every",0), doc("deactivate party wrangler");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -2.5506,1.90735e-006,-3.58278,0xb905e731;
+	}
+}
+[t:cmd_camera_command,n:0x00500030]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 27;
+	  x next_scid = 0x00500053;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = -0.112448,0.701015,-0.113416,-0.695032;
+	  p position = -0.286875,5.51252,-1.52164,0x61f498af;
+	}
+}
+[t:cmd_camera_command,n:0x0050004d]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 1;
+	  x next_scid = 0x0050004E;
+	}
+	[placement]
+	{
+	  q orientation = 0.0486786,0.940194,-0.152113,0.300878;
+	  p position = 1.21115,5.51252,0.747585,0xff69ae77;
+	}
+}
+[t:cmd_camera_command,n:0x0050004e]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 1;
+	  x next_scid = 0x0050004F;
+	}
+	[placement]
+	{
+	  q orientation = 0.0486786,0.940194,-0.152113,0.300878;
+	  p position = -0.725605,13.5125,2.61987,0xdd2f1b74;
+	}
+}
+[t:cmd_camera_command,n:0x0050004f]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 1;
+	  x next_scid = 0x00500050;
+	}
+	[placement]
+	{
+	  q orientation = 0.152113,-0.300878,0.0486786,0.940194;
+	  p position = -13.9785,12.9125,-8.35737,0x04ba2cf2;
+	}
+}
+[t:cmd_camera_command,n:0x0050004c]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 1.5;
+	  x next_scid = 0x0050004D;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.0486786,0.940194,-0.152113,0.300878;
+	  p position = -0.704918,5.51252,0.16768,0x12cd849b;
+	}
+}
+[t:cmd_move_party,n:0x0050003b]
+{
+	[cmd_party]
+	{
+	  x facepoint = 0x0050001A;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.98961,-2.38419e-007,-0.522827,0x08a8aaa8;
+	}
+}
+[t:cmd_camera_command,n:0x00500050]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 3;
+	  x next_scid = 0x00500030;
+	}
+	[placement]
+	{
+	  q orientation = 0.152113,-0.300878,0.0486786,0.940194;
+	  p position = 1.06281,11.4625,-1.41751,0xbb94e8b4;
+	}
+}
