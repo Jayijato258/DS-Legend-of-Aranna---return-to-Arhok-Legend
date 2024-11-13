@@ -10,7 +10,7 @@ This is a community effort to change the storyline of the Return to Ahrok expans
 
 # Roadmap
 
-1) Expand the exploration map as it was in the Legend of Arranna expansion.
+1) Expand the exploration map as it was in the Legend of Aranna expansion.
 2) Rework the main mission series of rescuing King Hassat.
 3) Add entertaining side missions.
 4) reactivate the mini map
