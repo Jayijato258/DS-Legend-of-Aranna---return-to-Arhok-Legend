@@ -1,0 +1,1 @@
+This is just a simple plugin that adds icons and descriptions for a few formats like .sno .skrit .gas .mp3 etc etc.
