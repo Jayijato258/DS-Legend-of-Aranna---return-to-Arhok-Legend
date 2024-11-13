@@ -1,5 +1,0 @@
-[t:tsd,n:b_c_ebb_rglass]
-{
-	b hasalpha = true;            
-	layer1texture1 = b_c_ebb_rglass; 
-}
