@@ -1,0 +1,290 @@
+## TAT Added with DSX and Yesterhaven asset drop
+TREE = B_I_JNG ,	Jungle ,	"Jungle Bitmaps"
+TREE = B_I_SEA ,	Sea ,	"Sea Bitmaps"
+
+TREE = B_T_JNG01		, Jungle		, "Jungle"
+TREE = B_T_JNG01_FOR	, Forest		, "Forest"
+TREE = B_T_JNG01_FLR	, Floor			, "Floor"
+TREE = B_T_JNG01_PTH	, Path			, "Path"
+TREE = B_T_JNG01_WAL	, Wall			, "Wall"
+TREE = B_T_JNG01_RVR	, River			, "River"
+TREE = B_T_JNG01_SCAFF	, Scaffolding	, "Scaffolding"
+TREE = B_T_JNG01_RUIN	, Ruins			, "Ruins"
+TREE = B_T_SEA02		, Seashore_2	, "Seashore 2"
+TREE = B_T_SEA02_FLR	, Floor			, "Floor"
+TREE = B_T_SEA02_RVR	, River			, "River"
+TREE = B_T_SEA02_PTH	, Path			, "Path"
+TREE = B_T_SEA02_WAL	, Wall			, "Wall"
+TREE = B_T_Cty		, City			, "City"
+TREE = B_T_Cty_Zig	, Ziggurat		, "Ziggurat"
+TREE = B_T_Cty_Wal	, Wall			, "Wall"
+TREE = B_T_Cty_path	, path			, "path"
+TREE = B_T_wizCty 	, Wizard_City		, "Wizard_City"
+TREE = B_T_CLKRM	, CLock_Room		, "Clock_Room"
+
+TREE = T_JNG01		, Jungle		, "Jungle"
+TREE = T_JNG01_for	, Forest		, "Forest"
+TREE = T_FOR02		, Forest_Sequoia	, "Forest Sequoia"
+TREE = T_SEA02		, Seashore_2		, "Seashore 2"
+TREE = T_Cty		, City			, "City"
+TREE = T_Cty_brdg	, Bridge		, "Bridge"
+TREE = T_Cty_Wal	, Wall			, "Wall"
+TREE = T_Cty_path	, path			, "path"
+TREE = T_Cty_Zig	, Ziggurat		, "Ziggurat"
+TREE = T_WizCty 	, Wizard_City		, "Wizard_City"
+TREE = T_WizCty_Houses 	, Houses		, "Houses"
+TREE = T_WizCty_BRDG 	, Bridge		, "Bridge"
+TREE = T_CLKRM		, CLock_Room		, "Clock_Room"
+
+TREE = M_I_JNG ,	Jungle, "Jungle"
+TREE = M_I_SEA ,	Sea,	"Sea"
+## End TAT Add
+
+###############################################
+# Ed 2/20/2003 Tiger Model
+# MESH
+
+
+TREE = M_C_EAM_HG	, Hassat_Grunt	, "Hassat_Grunt"
+TREE = M_C_EAM_HW	, Hassat_Warrior		, "Hassat_Warrior"
+TREE = M_C_EAM_HS	, Hassat_Swordsman		, "Hassat_Swordsman"
+TREE = M_C_EAM_HA	, Hassat_Archer		, "Hassat_Archer"
+TREE = M_C_EAM_HA-02	, Hassat_Archer		, "Hassat_Archer"
+TREE = M_C_EAM_HA-03	, Hassat_Archer		, "Hassat_Archer"
+TREE = M_C_EAM_HM	, Hassat_Mage		, "Hassat_Mage"
+TREE = M_C_EAM_HM-02	, Hassat_Mage		, "Hassat_shaman"
+TREE = M_C_EAM_HM-03	, Hassat_Mage		, "Hassat_caster"
+TREE = M_C_EAM_HC	, Hassat_commander		, "Hassat_commander"
+
+# ANIMATION
+TREE = A_C_EAM_HASSAT		, Hassat	, "Hassat"
+TREE = A_C_EAM_HASSAT_COMMANDER		, Commander	, "Commander"
+
+# SPECIFIC ANIMATION, AND ANIMATION GROUP
+TREE = A_C_EAM_HASSAT_FS0	, FS0		, "Unarmed"
+TREE = A_C_EAM_HASSAT_FS5	, FS5		, "Staff"
+TREE = A_C_EAM_HASSAT_FS1	, FS1		, "Sword"
+TREE = A_C_EAM_HASSAT_FS6	, FS6		, "bow"
+TREE = A_C_EAM_HASSAT_COMMANDER_FS5	,FS5	,"Staff"
+
+# End Ed Add 2/20/2003
+###############################################
+
+
+###############################################
+# Scott
+
+# Thessic Armor
+TREE = B_C_POS_A8	, Type8			, "Armor Type 8"
+
+# Utraen Armor
+TREE = B_C_POS_A9	, Type9			, "Armor Type 9"
+
+# Twisted Mucosa
+TREE = M_C_EDM_TWMU,	Twisted_Mucosa,		"Twisted_Mucosa"
+TREE = A_C_EDM_TWMU,	Twisted_Mucosa,		"Twisted_Mucosa", FS0
+
+# Noctiss
+TREE = M_C_EDM_Noctiss,		Noctiss,		"Noctiss"
+
+# Flying Gritch
+TREE = M_C_EDM_FLGRITCH,		Flying_Gritch,		"Flying_Gritch"
+
+# Feathered Drakeling
+TREE = M_C_EDM_FLDRKLNG,		Feathered_Drakeling,		"Feathered_Drakeling"
+
+# Troll Masher
+TREE = M_C_ECM_TMASHER,		Troll_Masher,		"Troll_Masher"
+
+# Frost Giant
+TREE = M_C_ECM_FGIANT,		Frost_Giant,		"Frost_Giant"
+
+# Sandscreech
+TREE = M_C_EDM_SNDSKREECH,		Sandscreech,		"Sandscreech"
+
+# Scarthrall
+TREE = M_C_EDM_SCARTHRALL,		Scarthrall,		"Scarthrall"
+
+# Skatwyrm
+TREE = M_C_EDM_SKATWYRM,		Skatwyrm,		"Skatwyrm"
+
+# Scrub_Howler
+TREE = M_C_ECM_SCRUBHWL,		Scrub_Howler,		"Scrub_Howler"
+
+# Pygmy
+TREE = M_C_EDM_PYGMY,		Pygmy,		"Pygmy"
+
+# Bog_Beast
+TREE = M_C_EDM_BOGBEAST,		Bog_Beast,		"Bog_Beast"
+
+# Barkrunner
+TREE = M_C_EDM_BARKRUNNER,		Barkrunner,		"Barkrunner"
+
+# Bookas
+TREE = M_C_EDM_BOOKAS,		Bookas,		"Bookas"
+
+# Doppleganger
+TREE = M_C_ECM_DOPPLEGANGER,		Doppleganger,		"Doppleganger"
+
+# Demonic_Ursae
+TREE = M_C_EDM_DEMURSAE,		Demonic_Ursae,		"Demonic_Ursae"
+
+# Great Krakbone
+TREE = M_C_EBB_GRKRAKBONE,	Great_Krakbone,		"Great_Krakbone"
+TREE = A_C_EBB_GRKRAKBONE,	Great_Krakbone,		"Great_Krakbone", FS0
+
+# Lesser Krakbone
+TREE = M_C_EDM_LSRKRAKBONE,	Lesser_Krakbone,		"Lesser_Krakbone"
+TREE = A_C_EDM_LSRKRAKBONE,	Lesser_Krakbone,		"Lesser_Krakbone", FS0
+
+# Disco Krug (yeah baby, yeah!)
+TREE = m_c_eam_discokg,	DKrug,		"DKrug"
+###############################################
+
+#Nick 5/22
+
+#Giant_lizard
+TREE = M_C_EDM_giantlizard,		Giant_lizard,		"Giant_lizard"
+
+###############################################
+# Paolo 3/14
+TREE = M_C_EAM_ZAURASK,	Zaurask,		"Zaurask"
+TREE = M_C_EAM_ZMELEE,	Zaurask_Melee,	"Zaurask Melee"
+TREE = M_C_EAM_ZCASTER, Zaurask_Caster, "Zaurask Caster"
+TREE = M_C_EAM_ZCOMM,	Zaurask_Commander, "Zaurask Commander"
+TREE = M_C_EAM_ZZOMB,	Zaurask_Zombie, "Zaurask Zombie"
+TREE = A_C_EAM_ZAURASK,	Zaurask,		"Zaurask", FS0, FS1, FS2, FS5, FS6
+
+TREE = M_C_EBB_NOSSIROM, Nossirom, "Nossirom"
+TREE = A_C_EBB_NOSSIROM, Nossirom, "Nossirom", FS5
+
+TREE = M_C_EDM_SCORPIOT, Scorpiot, "Scorpiot"
+TREE = A_C_EDM_SCORPIOT, Scorpiot, "Scorpiot", FS0
+TREE = M_C_EDM_SCORPIGUN, Scorpigun, "Scorpigun"
+TREE = A_C_EDM_SCORPIGUN, Scorpigun, "Scorpigun", FS0
+
+TREE = M_C_EDM_FRENDER, Flesh_Render, "Flesh Render"
+TREE = A_C_EDM_FRENDER, Flesh_Render, "Flesh Render", FS0
+###############################################
+
+# Half-giant 3/10
+## Definition of Mesh Tree
+
+TREE = M_C_GAN_HG,		HalfGiant	,	"HalfGiant"
+
+TREE = M_C_GAN_HG_BOOT,	Boots		,	"HalfGiant Boots"
+TREE = M_C_GAN_HG_GNTL,	Gauntlets	,	"HalfGiant Gauntlets"
+TREE = M_C_GAN_HG_HLMT,	Helmets		,	"HalfGiant Helmets"
+
+# Character groups
+TREE = A_C_GAN_HG	, HalfGiant		, "HalfGiant"		, FS0 , FS1 , FS2 , FS3 , FS4 , FS5 , FS6 , FS7, FS8
+
+## Definition of Bitmap Tree
+
+TREE = B_C_GAN_HG , HalfGiant		, "HalfGiant"         
+
+// TAT 6/18 - for Utraean skins
+TREE = B_C_GAN_UTRAEAN,	Utraeans		, "Utraeans"
+
+#####################################################################
+
+## Klickclaw 4/11
+## Definition of Mesh Tree
+TREE = M_C_EDM_KC	, Klickclaw				, "Klickclaw"
+
+TREE = A_C_EDM_KC	, Klickclaw				, "Klickclaw"	, FS0
+
+#####################################################################
+## Rune Guardian 4/30
+
+TREE = M_C_ECM_RG	, Runeguard				, "Runeguard"
+
+
+TREE = A_C_ECM_RG	, Runeguard				, "Runeguard"	, FS0 , FS5
+
+######################################################################
+##PAck ANimal added 5/8
+##ED
+
+TREE = M_C_NA_PA	, Pack_Animal			, "Pack Animal"
+
+TREE = A_C_NA_PA	, Pack_Animal			, "Pack Animal"			, FS0
+
+
+#########################################################################
+##########Lost Queen & Droc for GPG #####################
+
+## legacy keys - to be removed
+TREE = M_C_EBB_LQ	, LostQueen		, "LostQueen"
+TREE = A_C_EBB_LQ	, LostQueen		, "LostQueen"	, FS0
+## changes to lost queen tree by Paolo 6/05
+TREE = M_C_EBB_LQB	, LostQueenBody		, "LostQueenBody"
+TREE = A_C_EBB_LQB	, LostQueenBody		, "LostQueenBody"	, FS0
+TREE = M_C_EBB_LQT	, LostQueenTail		, "LostQueenTail"
+TREE = A_C_EBB_LQT	, LostQueenTail		, "LostQueenTail"	, FS0
+
+
+TREE = M_C_EDM_DRC	, Droc				, "Droc"
+TREE = A_C_EDM_DRC	, Droc				, "Droc"	, FS0 , FS1 , FS6
+
+################################################################################
+###Undead Centaur Boss
+TREE = M_C_EBB_DK	, DeathKnight				, "DeathKnight"
+TREE = A_C_EBB_DK	, DeathKnight				, "DeathKnight"	, FS2
+
+######################################################################
+##Automaton added 5/21
+##Ed
+
+TREE = M_C_EDM_AU	, Automaton			, "Automaton"
+TREE = M_C_EDM_AU2	, Automaton2			, "Automaton2"
+
+TREE = A_C_EDM_AU	, Automaton			, "Automaton"			, FS0
+TREE = A_C_EDM_AU2	, Automaton2			, "Automaton2"			, FS0
+
+#########################################################################
+###shadow jumper ----6/4
+TREE = M_C_EBB_SJ	, ShadowJumper				, "ShadowJumper"
+TREE = A_C_EBB_SJ	, ShadowJumper				, "ShadowJumper"	, FS0 , FS1 , FS6 , FS5
+
+TREE = M_C_EBB_SJB	, ShadowJumperBoss				, "ShadowJumperBoss"
+TREE = A_C_EBB_SJB	, ShadowJumperBoss				, "ShadowJumperBoss"	 , FS5
+
+#################################################################################
+####Ed NPC's 6/5
+
+Tree = M_C_GBN_BS2	, BLackSmith2	,  "BlackSmith2"
+############################################################################
+### chitterskrag---6/9
+TREE = M_C_EDM_CHS	, Chitterskrag				, "Chitterskrag"
+TREE = A_C_EDM_CHS	, Chitterskrag				, "Chitterskrag"	, FS0 
+
+
+################################################################################
+#### GPG models (Elementals) 6/11
+
+Tree = M_C_EDM_crg	,CrystalGolem	,CrystalGolem
+Tree = M_C_EDM_ee	,EarthElemental	,EarthElemental
+Tree = M_C_EDM_we	,WaterElemental  ,WaterElemental
+Tree = M_C_EDM_ae	,AirElemental	,AirElemental
+Tree = M_C_EDM_aw	,AutomotonWasp	,AutomotonWasp
+Tree = M_C_EDM_sa	,AutomotonSynged	,AutomotonSynged
+Tree = M_C_EDM_mrblg	,MarbleGolem	,MarbleGolem
+
+Tree = A_C_EDM_crg	,CrystalGolem	,CrystalGolem	,FS0
+Tree = A_C_EDM_aw	,AutomatonWasp	,AutomatonWasp	,FS0
+Tree = A_C_EDM_ae	,AirElemental	,AirElemental	,FSO
+#### GPG Container anim
+Tree = A_I_JNG	,Jungle	,"Jungle"
+####Paco Easter Egg
+TREE = M_C_NA_PAC	, Paco			, "Paco"
+TREE = A_C_NA_PAC	, Paco			, "Paco"			, FS0
+############disco krug
+TREE = M_C_EAM_dsckrg	, Dsckrg			, "Dsckrg"
+TREE = A_C_EAM_dsckrg	, Dsckrg			, "Dsckrg"			, FS0
+#################################################################################################
+#### Mangler Elemental
+TREE = M_C_EDM_MELE	, ManglerElemental	, "ManglerElemental"
+####Rax
+TREE = M_C_EBB_RAX	, RAX			, "RAX"
+TREE = A_C_EBB_RAX	, RAX			, "RAX"			, FS0

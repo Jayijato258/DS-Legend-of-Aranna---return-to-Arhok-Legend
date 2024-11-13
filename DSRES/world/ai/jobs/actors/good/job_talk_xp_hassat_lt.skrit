@@ -1,0 +1,149 @@
+/*
+  ============================================================================
+  ----------------------------------------------------------------------------
+
+	File		: 	job_talk_xp_hassat_lt.skrit
+
+	Author(s)	: 	Mr. Nordee (Ripping off Anu)
+
+	Purpose		: 	Hassat Lieutenant should talk to you (not kill you, region2)
+
+	(C)opyright 2004 Mad Doc Software, LLC/Gas Powered Games, Inc.
+
+  ----------------------------------------------------------------------------
+  ============================================================================
+*/
+
+Go		m_Go$;
+GoMind	m_Mind$;
+GoBody  m_Body$;
+Job		m_Job$;
+Goid	m_Target$;
+
+property scid	hassatScid$;
+property scid	questBitsGizmoScid$;
+
+#include "k_job_c_mcp_fidget_utils"
+#include "k_job_c_talk_utils"
+
+startup state STARTUP$
+{
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//	init
+
+event OnJobInitPointers$( Job job$ )
+{
+	m_Job$		= job$;
+	m_Go$		= job$.Go;
+	m_Mind$		= job$.Go.Mind;
+	m_Body$		= job$.Go.Body;
+}
+
+
+event OnJobInit$( Job job$ )
+{
+	OnJobInitPointers$( job$ );
+
+	m_Target$	= job$.GoalObject;
+
+	SetState Talk$;  
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	face the audience
+state Face$
+{
+	transition
+	{
+		-> Talk$:	OnWorldMessage( WE_MCP_FACING_LOCKEDON );
+	}
+
+	event OnEnterState$
+	{	
+		if( !m_Go$.HasConversation )
+		{
+			report.errorf( "Actor '%s', scid:0x%08x was told to run job_talk but he doesn't have a conversation component.",
+							m_Go$.GetTemplateName,
+							m_Go$.Goid );
+			SetState Exiting$;
+		}
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );	
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	blab blab away... pretend you're Lee
+state Talk$
+{
+	transition
+	{
+		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) =
+		{	
+			if( GameAuditor.GetDb.GetBool( "give_move_command" ) )
+			{
+				// set the bool to false, so that this won't happen again
+				GameAuditor.GetDb.SetBool( "give_move_command", false );
+				// send an activation to the hassate so that it moves to the displacer.
+				hassatScid$ = MakeScid(0x002000d9);
+				SendWorldMessage( WE_REQ_ACTIVATE, m_Go$.Goid, hassatScid$);
+				// activate sent to bool bits gizmo
+				// this will let the player use the displacer
+				questBitsGizmoScid$ = MakeScid(0x00200019);
+				SendWorldMessage( WE_REQ_ACTIVATE, m_Go$.Goid, questBitsGizmoScid$);
+			}
+			
+			if( m_Go$.Mind.ActorAutoFidgets )
+			{
+				StartFidgetIfRequired$();
+			}
+		}
+	}
+	
+	trigger OnWorldMessage$( WE_ANIM_DONE )
+	{
+		TryAnim$('talk');
+	}
+
+	event OnEnterState$
+	{
+		// first time talking to the lieutenant
+		if( Victory.GetQuestOrder( "xp_king", m_Target$) == 2 )
+		{
+			// set a bool so that we know to tell the hassat to move to the displacer.
+			GameAuditor.GetDb.SetBool( "give_move_command", true );
+		}
+
+
+		// yay. they have victory in their pocket.
+		if( Victory.IsQuestCompleted("xp_king", m_Target$ ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( "hassat_finish" );
+			TryAnim$('talk');	
+		}
+		else
+		{
+			// talk talk
+			m_Go$.GetConversation.RSSelectConversation( "hassat_3" );
+			TryAnim$('talk');
+		}
+		
+		m_Go$.GetConversation.RSActivateDialogue();
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	finish blabbing
+state Exiting$
+{
+	event OnEnterState$
+	{
+		m_Job$.MarkForDeletion();
+	}
+}
+
+

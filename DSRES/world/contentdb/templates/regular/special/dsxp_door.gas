@@ -1,0 +1,220 @@
+
+[t:template,n:dsxp_vault_door]
+{
+	specializes		= base_door;
+	doc				= "ds_xp_vault_door";
+    category_name   = "doors";
+
+        aspect:model	= m_i_glb_vault_door;
+    aspect:material = town_gate_01;
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix = a_i_glb;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= vault_door;
+			}
+			
+		}
+	}
+	[door_basic]
+	{
+	open_sfx = "door_shake";
+        oneshot = true;
+	}
+}
+}
+[t:template,n:dsxp_jail_door]
+{
+	specializes		= base_door;
+	doc				= "ds_xp_jail_door";
+    category_name   = "doors";
+
+        aspect:model	= m_i_glb_jail_gate;
+    aspect:material = town_gate_01;
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix = a_i_glb;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= jail_gate;
+			}
+			
+		}
+	}
+	[door_basic]
+	{
+	open_sfx = "door_shake";
+        oneshot = true;
+	}
+}
+[t:template,n:dsxp_door_glb_gendungeon_06]
+{
+	specializes		= base_door;
+	doc				= "ds_xp_gendung_secure";
+    category_name   = "doors";
+	
+	[aspect]
+    {
+    	model		= m_i_glb_door-gendungeon-03;
+    	[textures]	{ 0 = b_i_glb_secure_door; }
+    	use_range   = 3.0;
+    	material = wood_medium;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix = a_i_glb;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-gendungeon-01-open;
+			}
+			[chore_close]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-gendungeon-01-close;
+			}
+		}
+	}
+	[door_basic]
+	{
+		open_sfx = "door_shake";
+        oneshot = true;
+        delete_on_open = true; 
+	}
+}
+[t:template,n:dsxp_door_glb_gendungeon_07]
+{
+	specializes		= base_door;
+	doc				= "ds_xp_gendung_secure2";
+    category_name   = "doors";
+	
+	[aspect]
+    {
+    	model		= m_i_glb_door-gendungeon-05;
+    	[textures]	{ 0 = b_i_glb_secure_door2; }
+    	use_range   = 3.0;
+    	material = wood_medium;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix = a_i_glb;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-gendungeon-01-open;
+			}
+			[chore_close]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-gendungeon-01-close;
+			}
+		}
+	}
+	[door_basic]
+	{
+		open_sfx = "door_shake";
+        oneshot = true;
+        delete_on_open = true; 
+	}
+}
+[t:template,n:xp_ice_gate_right]
+{
+	specializes		= base_door;
+	doc				= "xp_ice_gate_right";
+    category_name   = "doors";
+
+    aspect:model	= m_i_ice_dsx_gate-door-R;
+    aspect:material = town_gate_01;
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix = a_i_ice;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= dsx_gate-door-R-open;
+			}
+			[chore_close]
+			{
+				skrit			= transition;
+				anim_files: 00	= gate-door-R-close;
+			}
+		}
+	}
+	
+	[messages]
+    {
+      [locked]
+      {
+         screen_text = "These gates have been locked by order of the Mayor.";
+      }
+    }
+
+   [door_basic]
+   {
+      use_toggle= true;
+      oneshot = true;
+      delete_on_open= false;
+      open_sfx = "door_shake";
+   }
+}
+
+[t:template,n:xp_ice_gate_left]
+{
+	specializes		= base_door;
+	doc				= "xp_ice_gate_left";
+    category_name   = "doors";
+
+    aspect:model	= m_i_ice_dsx_gate-door;
+    aspect:material = town_gate_02;
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix = a_i_ice;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= dsx_gate-door-open;
+			}
+			[chore_close]
+			{
+				skrit			= transition;
+				anim_files: 00	= gate-door-close;
+			}
+		}
+	}
+	[messages]
+    {
+      [locked]
+      {
+         screen_text = "These gates have been locked by order of the Mayor.";
+      }
+    }
+
+   [door_basic]
+   {
+      use_toggle= true;
+      oneshot = true;
+      delete_on_open= false;
+      open_sfx = "door_shake";
+   }
+}

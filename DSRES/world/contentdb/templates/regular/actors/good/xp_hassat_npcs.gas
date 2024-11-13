@@ -1,0 +1,485 @@
+[t:template,n:xp_hassat_melee_base]
+{
+	category_name = "1W_evil_a";
+	doc = xp_hassat_melee_base;
+	specializes = actor_good;
+	[aspect]
+	{
+		model			= m_c_eam_HW;
+		[textures] { 0	= b_c_eam_hassat_lieutenant; }
+		scale_base 		= 0.85;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_leopard_SED;  }
+			[enemy_spotted]	{ priority = high; * = s_e_call_leopard_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_leopard_SED;  }
+			[hit_solid]		{ priority = low; * = s_e_hit_leopard_SED;  }
+		}
+	}
+	[body]
+	{
+		min_move_velocity	= 1.5;
+		avg_move_velocity	= 3.500;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine02;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine02;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_eam_hassat_fs;
+			[chore_attack]
+			{
+				chore_stances = 5,1;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					high = at-02;
+					loww = at-03;
+					extr = at-04;				
+					qffg = dff;
+				}
+				[anim_durations]
+				{
+					fs5 = 1.25;			
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 5,1;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 5,1;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 5,1;
+				skrit = select_fidget;
+				[anim_files] 
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					talk = a_c_eam_hassat_fs1_dff-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 5,1;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}	
+	[common]
+	{
+		membership = hero;
+		auto_expiration_class = never;
+		forced_expiration_class = never;
+	}
+	[inventory]
+	{
+		spew_equipped_kill_count = <ignore>;
+		[equipment]
+		{
+			es_weapon_hand=ss_g_c_bl_1h_fun_02_dsx;
+      	}
+		[pcontent]{}
+	}
+}
+
+// Snow Hassat Lietenant
+[t:template,n:xp_hassat_lt]
+{
+	category_name = "1W_evil_a";
+	doc = "xp_hassat_lt";
+	specializes = xp_hassat_melee_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength     = 1, 0;
+			intelligence = 1, 0;
+			dexterity    = 1, 0;
+			melee        = 1, 0;
+		}
+	}
+	[aspect]
+	{
+		life			= 1;
+		max_life		= 1;
+	}
+	[attack]
+	{
+		attack_range 	= 0.5;
+		damage_max 		= 1;
+		damage_min 		= 1;
+	}
+	[common] 
+	{ 
+		screen_name="Hassat Lieutenant";		
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hassat_3;
+			* = hassat_finish;
+		}
+	}
+	[defend] { defense = 1; }
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_xp_hassat_lt.skrit;
+	}
+}
+
+
+[t:template,n:xp_hassat_fighter]
+{
+	category_name = "1W_evil_a";
+	doc = "xp_hassat_fighter";
+	specializes = actor_good;
+	[actor]
+	{
+		[skills]
+		{
+			strength     = 1, 0;
+			intelligence = 1, 0;
+			dexterity    = 1, 0;
+			ranged       = 1, 0;
+		}
+	}
+	[aspect]
+	{
+		scale_base 			= 1.0;
+		model				= m_c_eam_hW;		
+		[textures] { 0=b_c_eam_hassat_fighter; }
+		experience_value	= 1;
+		life             	= 1;
+		max_life         	= 1;
+		mana             	= 1;
+		max_mana         	= 1;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_cheetah_SED;  }
+			[enemy_spotted]	{ priority = high; * = s_e_call_cheetah_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_cheetah_SED;  }
+		}
+	}
+	[attack]
+	{
+		attack_range 	= .5;
+		damage_max 		= 1;
+		damage_min 		= 1;
+	}
+	[body]
+	{
+		min_move_velocity	= 1.5;
+		avg_move_velocity	= 3.500;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine02;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine02;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_eam_hassat_fs;
+			[chore_attack]
+			{
+				chore_stances = 6;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					high = at-02;
+					loww = at-03;
+					qffg = dff;
+				}
+				[anim_durations]
+				{
+					fs6 = 1.25;			
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 6;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 6;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 6;
+				skrit = select_fidget;
+				[anim_files] 
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 6;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common] 
+	{ 
+		screen_name="Hassat Hunter";
+		membership = hero;
+		auto_expiration_class = never;
+		forced_expiration_class = never;
+	}
+	[defend] { defense=1; }
+	[inventory]
+	{
+		spew_equipped_kill_count = <ignore>;
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		[equipment]
+		{
+			es_shield_hand = bw_dsx_hassat_03;
+		}
+		[pcontent]{}    
+ 	}			
+	[mind]
+	{
+		actor_auto_switches_to_melee         = false;
+		actor_auto_switches_to_ranged        = true;
+		actor_auto_uses_stored_items		 = false;
+		
+		actor_weapon_preference				 = WP_RANGED;
+
+		jat_fidget				= world\ai\jobs\common\job_fidget.skrit;
+		jat_brain				= world\ai\jobs\common\brain_hero.skrit;
+		melee_engage_range		= 13.5;
+		ranged_engage_range	 	= 13.5;
+		sight_range				= 14.0;
+	}
+}
+
+[t:template,n:xp_hassat_king]
+{
+	category_name = "1w_evil_a";
+	doc="xp_hassat_king";
+	specializes = actor_good;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		=  1, 0;
+			intelligence 	=  1, 0;
+			dexterity 		=  1, 0;
+			nature_magic 	=  1, 0;
+			combat_magic	=  1, 0;
+		}
+    }
+	[aspect]
+	{
+		model				= m_c_eam_HM;
+		[textures] { 0=b_c_eam_hassat_king; }
+		experience_value 	= 1;
+		life				= 1;
+		max_life 			= 1;
+		mana 				= 1;
+		max_mana 			= 1;
+		scale_base 			= 1.1;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_lion_SED;  }
+			[enemy_spotted]	{ priority = high; * = s_e_call_lion_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_lion_SED;  }
+		}
+	}
+	[attack]
+	{
+		attack_range 	= .5;
+		damage_max 		= 1;
+		damage_min 		= 1;
+	}
+	[body]
+	{
+		min_move_velocity	= 1.5;
+		avg_move_velocity	= 2;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine02;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine02;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_eam_hassat_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = hw-at;
+					0mid = hw-at-02;
+					qffg = hw-dff;
+				}
+				[anim_durations]
+				{
+					fs7 = 1.25;			
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=hw-dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=die; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] 
+				{
+					00 = hw-dff;
+					01 = hw-dff-03;
+					02 = hw-dff-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=walk; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg-02;
+					01 = mg;
+					qffg = hw-dff;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					talk = a_c_eam_hassat_fs0_hw-dff-03;
+				}
+			}
+		}
+	}
+	[common] 
+	{ 
+		screen_name = "Hassat King"; 
+		membership = hero;
+		auto_expiration_class = never;
+		forced_expiration_class = never;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = king_6;
+			* = king_5;
+		}
+	}
+	[defend] { defense = 1; }
+	[inventory]
+	{
+		spew_equipped_kill_count = <ignore>;
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell   = dsx_spell_hassat_caster_fireshot; }    
+		[pcontent]{}	
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_xp_hassat_king.skrit;
+	}
+}
+// this  hassat 'joins' your party and protects you.
+[t:template,n:xp_hassat_protector]
+{
+	category_name = "1W_evil_a";
+	doc = "xp_hassat_protector";
+	specializes = xp_hassat_melee_base;
+	[actor]
+	{
+		can_show_health		= true;
+		[skills]
+		{
+			strength 		=  17, 0;
+			intelligence 	=  10, 0;
+			dexterity 		=  12, 0;
+			melee			=  10, 0;
+		}
+    }
+	[aspect]
+	{
+		life 					= 250;
+		max_life				= 250;
+		life_recovery_unit		= 0.2;
+		life_recovery_period	= 1.0;
+	}
+    [attack]
+	{
+		attack_range 	= .5;
+		damage_max 		= 65;
+		damage_min 		= 55;
+	}
+	[body]
+	{
+		min_move_velocity	= 3.5;
+		avg_move_velocity	= 4.5;
+	}
+	[common] 
+	{ 
+		screen_name = "Tareece"; 
+	}
+	[hassat_guardian]
+	{
+		move_scid = 0x00200112;
+	}
+	[defend]
+	{
+		defense = 45; 
+	}
+}

@@ -1,0 +1,22 @@
+[elevators]
+{
+	[maps]
+	{
+		[dsx_xp]
+		{
+			[elevatorGuids]
+			{
+				// region_2
+				* = 0x2f7489f4;
+
+				// region_3
+				* = 0xd274ab66;
+			}
+			[elevatorTightGuids]
+			{
+				// region_4
+				* = 0xef84b389;
+			}
+		}
+	}
+}
